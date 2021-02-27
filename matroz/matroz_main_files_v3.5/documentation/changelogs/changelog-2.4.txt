@@ -1,0 +1,235 @@
+==============================
+10 October, 2017 - Version 2.4
+==============================
+
+-------------------------------------------------------------------------------------------
+Backup your theme/style folder and files before applying these updates.
+-------------------------------------------------------------------------------------------
+The best way is to use a compare tool, like: https://sourceforge.net/projects/kdiff3/files/
+and use it to compare the 'folders' (the version you're using with the new version)
+-------------------------------------------------------------------------------------------
+Updating HTML Templates Requires Manual Work.
+-------------------------------------------------------------------------------------------
+
+
+*. WHMCS template updated to be compatible with latest "WHMCS Version 7.3.0"
+----------------------------------------------------------------------------
+
+	*. Simply Replace The Following Files:
+	--------------------------------------
+		-> css/all.css
+		-> css/all.min.css
+		-> css/invoice.css
+		-> css/main-color-1.css
+		-> css/main-color-2.css
+		-> css/main-color-3.css
+		-> css/main-color-4.css
+		-> css/main-color-5.css
+		-> css/matrozhost-style.css
+		-> css/styles.css
+		-> css/help.md (+Add)
+		-> error/page-not-found.tpl
+		-> includes/captcha.tpl
+		-> includes/verifyemail.tpl
+		-> includes/linkedaccounts.tpl (+Add)
+		-> js/scripts.js
+		-> js/scripts.min.js
+		-> js/whmcs.js
+		-> store/spamexperts/index.tpl
+		-> store/ssl/dv.tpl
+		-> store/ssl/ev.tpl
+		-> store/ssl/index.tpl
+		-> store/ssl/ov.tpl
+		-> store/ssl/wildcard.tpl
+		-> store/weebly/index.tpl
+		-> store/weebly/upgrade.tpl
+		-> clientareaaddcontact.tpl
+		-> clientareacontacts.tpl
+		-> clientareacreditcard.tpl
+		-> clientareasecurity.tpl
+		-> clientregister.tpl
+		-> knowledgebasearticle.tpl
+		-> login.tpl
+		-> twitterfeed.tpl
+		-> viewinvoice.tpl
+
+	*. Simply Replace The Following Codes:
+	--------------------------------------
+		-> header.tpl
+			=> Deleted:
+			-----------
+			Line 58 :
+			Line 59 :            <!-- Top Bar -->
+			Line 60 :            <div id="top-nav">
+			Line 61 :                <!-- Language -->
+			Line 62 :                {if $languagechangeenabled && count($locales) > 1}
+			Line 63 :                    <div class="pull-right nav">
+			Line 64 :                        <a href="#" class="quick-nav" data-toggle="popover" id="languageChooser"><i class="fa fa-language"></i> {$LANG.chooselanguage} <span class="caret"></span></a>
+			Line 65 :                        <div id="languageChooserContent" class="hidden">
+			Line 66 :                            <ul>
+			Line 67 :                                {foreach from=$locales item=locale}
+			Line 68 :                                    <li><a href="{$currentpagelinkback}language={$locale.language}">{$locale.localisedName}</a></li>
+			Line 69 :                                {/foreach}
+			Line 70 :                            </ul>
+			Line 71 :                        </div>
+			Line 72 :                    </div>
+			Line 73 :                {/if}
+			Line 74 :                <!-- Login/Account Notifications -->
+			Line 75 :                {if $loggedin}
+			Line 76 :                    <div class="pull-right nav">
+			Line 77 :                        <a href="#" class="quick-nav" data-toggle="popover" id="accountNotifications" data-placement="bottom" title="{lang key="notifications"}"><i class="fa fa-info"></i> {$LANG.notifications} ({$clientAlerts|count})</a>
+			Line 78 :                        <div id="accountNotificationsContent" class="hidden">
+			Line 79 :                            {foreach $clientAlerts as $alert}
+			Line 80 :                                <div class="clientalert text-{$alert->getSeverity()}">{$alert->getMessage()}{if $alert->getLinkText()} <a href="{$alert->getLink()}" class="btn btn-xs btn-{$alert->getSeverity()}">{$alert->getLinkText()}</a>{/if}</div>
+			Line 81 :                            {foreachelse}
+			Line 82 :                                <div class="clientalert text-success"><i class="fa fa-check-square-o"></i> {$LANG.notificationsnone}</div>
+			Line 83 :                            {/foreach}
+			Line 84 :                        </div>
+			Line 85 :                    </div>
+			Line 86 :                {else}
+			Line 87 :                    <div class="pull-right nav">
+			Line 88 :                        <a href="#" class="quick-nav" data-toggle="popover" id="loginOrRegister" data-placement="bottom"><i class="fa fa-user"></i> {$LANG.login}</a>
+			Line 89 :                        <div id="loginOrRegisterContent" class="hidden">
+			Line 90 :                            <form action="{if $systemsslurl}{$systemsslurl}{else}{$systemurl}{/if}dologin.php" method="post" role="form">
+			Line 91 :                                <div class="form-group">
+			Line 92 :                                    <input type="email" name="username" class="form-control" placeholder="{$LANG.clientareaemail}" required />
+			Line 93 :                                </div>
+			Line 94 :                                <div class="form-group">
+			Line 95 :                                    <div class="input-group">
+			Line 96 :                                        <input type="password" name="password" class="form-control" placeholder="{$LANG.loginpassword}" autocomplete="off" required />
+			Line 97 :                                        <span class="input-group-btn">
+			Line 98 :                                            <input type="submit" class="btn btn-primary" value="{$LANG.login}" />
+			Line 99 :                                        </span>
+			Line 100:                                    </div>
+			Line 101:                                </div>
+			Line 102:                                <label class="checkbox-inline">
+			Line 103:                                    <input type="checkbox" name="rememberme" /> {$LANG.loginrememberme} &bull; <a href="{$WEB_ROOT}/pwreset.php">{$LANG.forgotpw}</a>
+			Line 104:                                </label>
+			Line 105:                            </form>
+			Line 106:                            {if $condlinks.allowClientRegistration}
+			Line 107:                                <hr />
+			Line 108:                                {$LANG.newcustomersignup|sprintf2:"<a href=\"$WEB_ROOT/register.php\">":"</a>"}
+			Line 109:                            {/if}
+			Line 110:                        </div>
+			Line 111:                    </div>
+			Line 112:                {/if}
+			Line 113:                <!-- Shopping Cart -->
+			Line 114:                <div class="pull-right nav">
+			Line 115:                    <a href="{$WEB_ROOT}/cart.php?a=view" class="quick-nav"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs">{$LANG.viewcart} (</span><span id="cartItemCount">{$cartitemcount}</span><span class="hidden-xs">)</span></a>
+			Line 116:                </div>
+			Line 117:
+			Line 118:                {if $adminMasqueradingAsClient}
+			Line 119:                    <!-- Return to admin link -->
+			Line 120:                    <div class="alert alert-danger admin-masquerade-notice">
+			Line 121:                        {$LANG.adminmasqueradingasclient}<br />
+			Line 122:                        <a href="{$WEB_ROOT}/logout.php?returntoadmin=1" class="alert-link">{$LANG.logoutandreturntoadminarea}</a>
+			Line 123:                    </div>
+			Line 124:                {elseif $adminLoggedIn}
+			Line 125:                    <!-- Return to admin link -->
+			Line 126:                    <div class="alert alert-danger admin-masquerade-notice">
+			Line 127:                        {$LANG.adminloggedin}<br />
+			Line 128:                        <a href="{$WEB_ROOT}/logout.php?returntoadmin=1" class="alert-link">{$LANG.returntoadminarea}</a>
+			Line 129:                    </div>
+			Line 130:                {/if}
+			Line 131:
+			Line 132:            </div>
+			
+			=> Added:
+			---------
+			Line 58 :			<ul class="top-nav">
+			Line 59 :				{if $languagechangeenabled && count($locales) > 1}
+			Line 60 :					<li>
+			Line 61 :						<a href="#" class="choose-language" data-toggle="popover" id="languageChooser">
+			Line 62 :							{$activeLocale.localisedName}
+			Line 63 :							<b class="caret"></b>
+			Line 64 :						</a>
+			Line 65 :						<div id="languageChooserContent" class="hidden">
+			Line 66 :							<ul>
+			Line 67 :								{foreach $locales as $locale}
+			Line 68 :									<li>
+			Line 69 :										<a href="{$currentpagelinkback}language={$locale.language}">{$locale.localisedName}</a>
+			Line 70 :									</li>
+			Line 71 :								{/foreach}
+			Line 72 :							</ul>
+			Line 73 :						</div>
+			Line 74 :					</li>
+			Line 75 :				{/if}
+			Line 76 :				{if $loggedin}
+			Line 77 :					<li>
+			Line 78 :						<a href="#" data-toggle="popover" id="accountNotifications" data-placement="bottom">
+			Line 79 :							{$LANG.notifications}
+			Line 80 :							{if count($clientAlerts) > 0}<span class="label label-info">NEW</span>{/if}
+			Line 81 :							<b class="caret"></b>
+			Line 82 :						</a>
+			Line 83 :						<div id="accountNotificationsContent" class="hidden">
+			Line 84 :							<ul class="client-alerts">
+			Line 85 :							{foreach $clientAlerts as $alert}
+			Line 86 :								<li>
+			Line 87 :									<a href="{$alert->getLink()}">
+			Line 88 :										<i class="fa fa-fw fa-{if $alert->getSeverity() == 'danger'}exclamation-circle{elseif $alert->getSeverity() == 'warning'}warning{elseif $alert->getSeverity() == 'info'}info-circle{else}check-circle{/if}"></i>
+			Line 89 :										<div class="message">{$alert->getMessage()}</div>
+			Line 90 :									</a>
+			Line 91 :								</li>
+			Line 92 :							{foreachelse}
+			Line 93 :								<li class="none">
+			Line 94 :									{$LANG.notificationsnone}
+			Line 95 :								</li>
+			Line 96 :							{/foreach}
+			Line 97 :							</ul>
+			Line 98 :						</div>
+			Line 99 :					</li>
+			Line 100:					<li class="primary-action">
+			Line 101:						<a href="{$WEB_ROOT}/logout.php" class="btn">
+			Line 102:							{$LANG.clientareanavlogout}
+			Line 103:						</a>
+			Line 104:					</li>
+			Line 105:				{else}
+			Line 106:					<li>
+			Line 107:						<a href="{$WEB_ROOT}/clientarea.php">{$LANG.login}</a>
+			Line 108:					</li>
+			Line 109:					{if $condlinks.allowClientRegistration}
+			Line 110:						<li>
+			Line 111:							<a href="{$WEB_ROOT}/register.php">{$LANG.register}</a>
+			Line 112:						</li>
+			Line 113:					{/if}
+			Line 114:					<li class="primary-action">
+			Line 115:						<a href="{$WEB_ROOT}/cart.php?a=view" class="btn">
+			Line 116:							{$LANG.viewcart}
+			Line 117:						</a>
+			Line 118:					</li>
+			Line 119:				{/if}
+			Line 120:				{if $adminMasqueradingAsClient || $adminLoggedIn}
+			Line 121:					<li>
+			Line 122:						<a href="{$WEB_ROOT}/logout.php?returntoadmin=1" class="btn btn-logged-in-admin" data-toggle="tooltip" data-placement="bottom" title="{if $adminMasqueradingAsClient}{$LANG.adminmasqueradingasclient} {$LANG.logoutandreturntoadminarea}{else}{$LANG.adminloggedin} {$LANG.returntoadminarea}{/if}">
+			Line 123:							<i class="fa fa-sign-out"></i>
+			Line 124:						</a>
+			Line 125:					</li>
+			Line 126:				{/if}
+			Line 127:			</ul>
+		
+		-> footer.tpl
+			=> Deleted:
+			-----------
+			Line 1 :            </div><!-- /.main-content -->
+			Line 2 :            {if !$inShoppingCart && $secondarySidebar->hasChildren()}
+			Line 3 :                <div class="col-md-3 pull-md-left sidebar">
+			Line 4 :                    {include file="$template/includes/sidebar.tpl" sidebar=$secondarySidebar}
+			Line 5 :                </div>
+			Line 6 :            {/if}
+			Line 7 :        </div>
+			Line 8 :        <div class="clearfix"></div>
+			Line 9 :    </div>
+			Line 10:</section>
+			
+			=> Added:
+			---------
+			Line 1 :                </div><!-- /.main-content -->
+			Line 2 :                {if !$inShoppingCart && $secondarySidebar->hasChildren()}
+			Line 3 :                    <div class="col-md-3 pull-md-left sidebar">
+			Line 4 :                        {include file="$template/includes/sidebar.tpl" sidebar=$secondarySidebar}
+			Line 5 :                    </div>
+			Line 6 :                {/if}
+			Line 7 :            <div class="clearfix"></div>
+			Line 8 :        </div>
+			Line 9 :    </div>
+			Line 10:</section>

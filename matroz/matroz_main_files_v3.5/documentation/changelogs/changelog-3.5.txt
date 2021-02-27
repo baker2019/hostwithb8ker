@@ -1,0 +1,85 @@
+==============================
+10 October, 2020 - Version 3.5
+==============================
+
+-------------------------------------------------------------------------------------------
+Backup your theme/style folder and files before applying these updates.
+-------------------------------------------------------------------------------------------
+The best way is to use a compare tool, like: https://sourceforge.net/projects/kdiff3/files/
+and use it to compare the 'folders' (the version you're using with the new version)
+-------------------------------------------------------------------------------------------
+Updating HTML Templates Requires Manual Work.
+-------------------------------------------------------------------------------------------
+
+
+*. WHMCS template updated to be compatible with the latest "WHMCS Version 8.0.2":
+----------------------------------------------------------------------------
+
+    *. New File/Folders Added:
+    --------------------------
+    -> access-denied.tpl
+    -> account-contacts-manage.tpl
+    -> account-contacts-new.tpl
+    -> account-user-management.tpl
+    -> account-user-permissions.tpl
+    -> includes/flashmessage.tpl
+    -> store/ox/index.php
+    -> store/ox/index.tpl
+    -> store/ox/manage.tpl
+    -> two-factor-challenge.tpl
+    -> two-factor-new-backup-code.tpl
+    -> user-invite-accept.tpl
+    -> user-password.tpl
+    -> user-profile.tpl
+    -> user-security.tpl
+    -> user-switch-account-forced.tpl
+    -> user-switch-account.tpl
+    -> user-verify-email.tpl
+
+    *. Files Affected (Need to Replace):
+    ------------------------------------
+    -> account-paymentmethods-billing-contacts.tpl
+    -> clientareacancelrequest.tpl
+    -> clientareadomaincontactinfo.tpl
+    -> clientareadomaindetails.tpl
+    -> clientareadomaindns.tpl
+    -> clientareaemails.tpl
+    -> clientareahome.tpl
+    -> clientareaproductdetails.tpl
+    -> clientareasecurity.tpl
+    -> clientregister.tpl
+    -> css/all.css
+    -> css/all.min.css
+    -> css/overrides.css
+    -> css/styles.css
+    -> includes/captcha.tpl
+    -> includes/verifyemail.tpl
+    -> invoicepdf.tpl
+    -> js/scripts.js
+    -> js/scripts.min.js
+    -> js/twitter.js
+    -> js/whmcs.js
+    -> login.tpl
+    -> managessl.tpl
+    -> payment/card/validate.tpl
+    -> store/codeguard/index.tpl
+    -> store/css/style.css
+    -> store/marketgoo/index.tpl
+    -> store/order.tpl
+    -> store/promos/upsell.tpl
+    -> store/sitelock/index.tpl
+    -> store/sitelockvpn/index.tpl
+    -> store/spamexperts/index.tpl
+    -> store/ssl/competitive-upgrade.tpl
+    -> store/ssl/index.tpl
+    -> store/ssl/shared/certificate-pricing.tpl
+    -> store/ssl/shared/nav.tpl
+    -> store/weebly/index.tpl
+    -> store/weebly/index.tpl
+    -> store/weebly/upgrade.tpl
+    -> supportticketsubmit-steptwo.tpl
+    -> twitterfeed.tpl
+    -> upgrade-configure.tpl
+    -> viewemail.tpl
+    -> viewinvoice.tpl
+    -> viewticket.tpl

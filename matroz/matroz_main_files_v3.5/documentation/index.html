@@ -1,0 +1,3280 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>MatRoz - Material Design Agency and Business Template</title>
+
+		<meta
+			name="description"
+			content="MatRoz - Material Design Agency and Business Template"
+		/>
+		<meta name="author" content="ThemeLooks" />
+		<meta name="copyright" content="ThemeLooks" />
+
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			href="assets/images/favicon.png"
+		/>
+
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="assets/css/documenter_style.css"
+			media="all"
+		/>
+
+		<script src="assets/js/jquery.js"></script>
+
+		<script src="assets/js/jquery.scrollTo.js"></script>
+		<script src="assets/js/jquery.easing.js"></script>
+
+		<script>
+			document.createElement("section");
+			var duration = "500",
+				easing = "easeInOutExpo";
+		</script>
+		<script src="assets/js/script.js"></script>
+
+		<style>
+			html {
+				background-color: rgb(243, 243, 243);
+				color: #383838;
+			}
+			::-moz-selection {
+				background: #444444;
+				color: #dddddd;
+			}
+			::selection {
+				background: #444444;
+				color: #dddddd;
+			}
+			#documenter_sidebar #documenter_logo {
+				color: #fff;
+				font-weight: 700;
+				font-size: 24px;
+				display: table-cell;
+				vertical-align: middle;
+				height: 155px;
+				text-align: center;
+				text-decoration: none;
+				text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+			}
+			#documenter_sidebar #documenter_logo span {
+				color: #ff9800;
+			}
+			a {
+				color: #0000ff;
+			}
+			.btn {
+				border-radius: 3px;
+			}
+			.btn-primary {
+				background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+				background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+				background-image: -webkit-gradient(
+					linear,
+					0 0,
+					0 #0088cc,
+					from(#dddddd),
+					to(#0044cc)
+				);
+				background-image: -webkit-linear-gradient(
+					top,
+					#0088cc,
+					#0044cc
+				);
+				background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+				background-image: linear-gradient(top, #0088cc, #0044cc);
+				filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+				border-color: #0044cc #0044cc #bfbfbf;
+				color: #ffffff;
+			}
+			.btn-primary:hover,
+			.btn-primary:active,
+			.btn-primary.active,
+			.btn-primary.disabled,
+			.btn-primary[disabled] {
+				border-color: #0088cc #0088cc #bfbfbf;
+				background-color: #0044cc;
+			}
+			hr {
+				border-top: 1px solid #ebebeb;
+				border-bottom: 1px solid #ffffff;
+			}
+			#documenter_sidebar,
+			#documenter_sidebar ul a {
+				background-color: #dddddd;
+				color: #222222;
+			}
+			#documenter_sidebar ul a {
+				-webkit-text-shadow: 1px 1px 0px #eeeeee;
+				-moz-text-shadow: 1px 1px 0px #eeeeee;
+				text-shadow: 1px 1px 0px #eeeeee;
+			}
+			#documenter_sidebar ul {
+				border-top: 1px solid #aaaaaa;
+			}
+			#documenter_sidebar ul a {
+				border-top: 1px solid #eeeeee;
+				border-bottom: 1px solid #aaaaaa;
+				color: #444444;
+			}
+			#documenter_sidebar ul a:hover {
+				background: #444444;
+				color: #dddddd;
+				border-top: 1px solid #444444;
+			}
+			#documenter_sidebar ul a.current {
+				background: #444444;
+				color: #dddddd;
+				border-top: 1px solid #444444;
+			}
+			#documenter_copyright {
+				display: block !important;
+				visibility: visible !important;
+			}
+		</style>
+	</head>
+
+	<body class="documenter-project-radiofalgun">
+		<div id="documenter_sidebar">
+			<a href="#documenter_start" id="documenter_logo"
+				><span><i class="fa fa-black-tie"></i> MAT</span>ROZ</a
+			>
+			<ul id="documenter_nav">
+				<li><a class="current" href="#documenter_content">START</a></li>
+				<li><a href="#documenter_cover">INTRODUCTION</a></li>
+				<li>
+					<a href="#installation" title="INSTALLATION"
+						>INSTALLATION</a
+					>
+				</li>
+				<li>
+					<a href="#template_structure" title="TEMPLATE STRUCTURE"
+						>TEMPLATE STRUCTURE</a
+					>
+				</li>
+				<li>
+					<a href="#html_structure" title="HTML STRUCTURE"
+						>HTML STRUCTURE</a
+					>
+				</li>
+				<li>
+					<a
+						href="#css_files_and_structure"
+						title="CSS FILES AND STRUCTURE"
+						>CSS FILES AND STRUCTURE</a
+					>
+				</li>
+				<li><a href="#javascript" title="JAVASCRIPT">JAVASCRIPT</a></li>
+				<li>
+					<a href="#source_and_creadits" title="SOURCE AND CREADITS"
+						>SOURCE AND CREADITS</a
+					>
+				</li>
+				<li><a href="#logs" title="CHANGE LOGS">CHANGE LOGS</a></li>
+				<li><a href="#faq" title="FAQ">FAQ</a></li>
+			</ul>
+			<div id="documenter_copyright">
+				Copyright ThemeLooks 2017 <br />
+				made with the
+				<a href="http://rxa.li/documenter">Documenter v2.0</a>
+			</div>
+		</div>
+		<div id="documenter_content">
+			<div id="banner">
+				<img src="assets/images/banner.png" alt="" />
+			</div>
+
+			<section id="documenter_start">
+				<h1>MatRoz</h1>
+				<h2>Material Design Agency and Business Template</h2>
+				<div id="documenter_buttons">
+					<a
+						href="http://themeforest.net/user/themelooks#contact"
+						class="btn btn-primary btn-large"
+						>Contact</a
+					>
+					<a
+						href="http://themelooks.com/"
+						class="btn btn-primary btn-large"
+						>Support</a
+					>
+				</div>
+				<hr />
+				<ul>
+					<li>created: 26/04/2016</li>
+					<li>by: <a href="http://themelooks.com/">ThemeLooks</a></li>
+					<li>
+						<a href="http://themelooks.com/">www.themelooks.com</a>
+					</li>
+					<li>
+						email:
+						<a href="mailto:support@themelooks.com"
+							>support@themelooks.com</a
+						>
+					</li>
+				</ul>
+				<p>
+					Thank you for purchasing my theme. If you have any questions
+					that are beyond the scope of this help file, please feel
+					free to email via my user page contact form here. Thanks so
+					much!
+				</p>
+
+				<h2>How to get help:</h2>
+				<hr class="notop" />
+				<p>
+					We will respond to buyers' questions via the contact form on
+					our profile.
+				</p>
+				<p>
+					We run support 24/7. You can expect a response within 24
+					hours.
+				</p>
+				<ul>
+					<li
+						style="
+							margin: 0px;
+							padding: 0px;
+							border: 0px;
+							outline: 0px;
+							font-weight: 700;
+							font-style: inherit;
+							font-family: inherit;
+							vertical-align: baseline;
+							color: #ff9800;
+						"
+					>
+						<strong>Support requests are for:</strong>
+					</li>
+					<li>- Help using templates</li>
+					<li>- Instructions setting up templates</li>
+					<li style="margin-bottom: 15px;">
+						- Bug reports and fixes
+					</li>
+					<li
+						style="
+							margin: 0px;
+							padding: 0px;
+							border: 0px;
+							outline: 0px;
+							font-weight: 700;
+							font-style: inherit;
+							font-family: inherit;
+							vertical-align: baseline;
+							color: rgb(255, 0, 0);
+						"
+					>
+						<strong>Support requests aren’t for:</strong>
+					</li>
+					<li>- Help with 3rd party plugins</li>
+					<li>- Integration of 3rd party plugins</li>
+					<li>- Free Customization Requests of our templates</li>
+				</ul>
+			</section>
+			<section id="documenter_cover">
+				<h5>
+					<strong>MatRoz</strong> is a
+					<strong
+						>Material Design Agency, Business, Technology, Hosting
+						with WHMCS Template</strong
+					>
+					designed for All kinds of Business like Creative Agency,
+					Tech Company, Hosting Company, etc. It's an HTML template
+					based on Material Design Lite, Bootstrap 3.3.7. and WHMCS
+					7.5.1. Anyone can easily update/edit this template to follow
+					our <strong>Well Sorted Documentation.</strong>
+				</h5>
+				<h2>Main Features of "MatRoz":</h2>
+				<ul>
+					<li>- Based on Material Design Lite</li>
+					<li>- Bootstrap v3.3.7 Ready</li>
+					<li>- <strong>WHMCS v7.5.1</strong> Ready</li>
+					<li>
+						- Google Material Style, Creative, Modern and Clean
+						Design
+					</li>
+					<li>
+						- Unlimited Google Material Color with Color Switcher
+					</li>
+					<li>- Fullscreen Youtube Background Slider Video</li>
+					<li>- Fullscreen Image Slider Background</li>
+					<li>- Fully (100%) Responsive</li>
+					<li>- Contact Form Integrated With Validetor</li>
+					<li>- Mailchimp Integrated With Validetor</li>
+					<li>- Twitter Widget Integrated</li>
+					<li>- Flickr API Integrated</li>
+					<li>- Modern Cross Browser Supported</li>
+					<li>- W3C Validate Code</li>
+				</ul>
+
+				<h2>Other Features of "MatRoz":</h2>
+				<ul>
+					<li>- Google Fonts</li>
+					<li>- FontAwesome Icons</li>
+					<li>- Well Documented</li>
+					<li>- and much more features…</li>
+				</ul>
+			</section>
+
+			<section id="installation">
+				<div class="page-header">
+					<h3>INSTALLATION</h3>
+					<hr class="notop" />
+				</div>
+
+				<div class="alert alert-danger">
+					<p>
+						Our item included two types of Templates. One is the
+						HTML Template to show your pricing/product/services and
+						another one is the WHMCS Template for client area.
+					</p>
+
+					<p>
+						So, you have to use both templates for your website and
+						need to link up manually all of your
+						pricing/product/services with WHMCS (from HTML Template
+						to WHMCS Template).
+					</p>
+				</div>
+
+				<h2>HTML TEMPLATE:</h2>
+				<ul>
+					<li>
+						Open up your FTP Manager and connect to your Hosting
+					</li>
+					<li>
+						<i
+							>Browse to required directory (Normally
+							public_html)</i
+						>
+					</li>
+					<li>
+						Upload the files inside
+						<strong><i>'/MatRoz'</i></strong> folder.
+					</li>
+				</ul>
+
+				<h2>WHMCS TEMPLATE:</h2>
+				<p>
+					<strong
+						>You'll get the step by step instruction in whmcs folder
+						readme.txt file.</strong
+					>
+				</p>
+			</section>
+
+			<section id="template_structure">
+				<div class="page-header">
+					<h3>TEMPLATE STRUCTURE</h3>
+					<hr class="notop" />
+				</div>
+
+				<ul style="font-weight: bold;">
+					<li
+						style="
+							margin: 10px 20px;
+							padding: 0px;
+							border: 0px;
+							outline: 0px;
+							font-weight: 700;
+							font-style: inherit;
+							font-family: inherit;
+							vertical-align: baseline;
+						"
+					>
+						./main_files
+					</li>
+					<li>
+						___ /default-version/
+						<ul style="margin: 10px 0;">
+							<li>___ /index.html</li>
+							<li>___ /about.html</li>
+							<li>___ /portfolio.html</li>
+							<li>___ /testimonial.html</li>
+							<li>___ /pricing.html</li>
+							<li>___ /blog.html</li>
+							<li>___ /blog_details.html</li>
+							<li>___ /blog_details_left.html</li>
+							<li>___ /contact.html</li>
+							<li>___ /404.html</li>
+						</ul>
+					</li>
+					<li>
+						___ /hosting-version/
+						<ul style="margin: 10px 0;">
+							<li>
+								___ /html-template
+								<ul style="margin: 10px 0;">
+									<li>___ /index.html</li>
+									<li>___ /about.html</li>
+									<li>___ /portfolio.html</li>
+									<li>___ /testimonial.html</li>
+									<li>___ /pricing.html</li>
+									<li>___ /blog.html</li>
+									<li>___ /blog_details.html</li>
+									<li>___ /blog_details_left.html</li>
+									<li>___ /contact.html</li>
+									<li>___ /404.html</li>
+								</ul>
+							</li>
+							<li>
+								___ /whmcs-template
+								<ul style="margin: 10px 0;">
+									<li>___ /MatRozHost/</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section id="html_structure">
+				<div class="page-header">
+					<h3>HTML STRUCTURE</h3>
+					<hr class="notop" />
+				</div>
+
+				<p>
+					The "MatRoz" template is a responsive HTML template based on
+					Bootstrap 3.3.7. The structure based on a flexible grid that
+					lets you change HTML pages quickly and logically with a
+					nestable system.
+				</p>
+
+				<p>
+					If you would like to edit the layout of any elements in
+					whole template, you would do the following:
+				</p>
+
+				<p>
+					Open any '.html' or, '.css', so that is extremely easy to
+					change any html markup and css attributes. Simply find the
+					related and commented heading in the html or, css file and
+					make your magic.
+				</p>
+
+				<img src="assets/images/Screenshot_html.png" alt="" />
+				<img src="assets/images/Screenshot_html2.png" alt="" />
+			</section>
+
+			<section id="css_files_and_structure">
+				<div class="page-header">
+					<h3>CSS FILES AND STRUCTURE</h3>
+					<hr class="notop" />
+				</div>
+				<p
+					style="
+						margin: 18px 0px;
+						padding: 0px;
+						border: 0px;
+						outline: 0px;
+						font-family: Arial, verdana, arial, sans-serif;
+						vertical-align: baseline;
+						line-height: 1.5em;
+						color: rgb(88, 88, 88);
+						background-color: rgb(243, 243, 243);
+					"
+				>
+					&quot;MatRoz&quot; using the following CSS files:
+				</p>
+				<p class="paragraph-style-one">
+					<span>style.css</span>&nbsp; <br />
+					The main css file
+				</p>
+				<p class="paragraph-style-one">
+					<span>css/responsive-style.css</span>&nbsp; <br />
+					The css file using responsive
+				</p>
+				<p class="paragraph-style-one">
+					<span>css/button-color-1.css</span><br />
+					<span>css/button-color-2.css</span><br />
+					<span>css/button-color-3.css</span><br />
+					<span>css/button-color-4.css</span><br />
+					<span>css/button-color-5.css</span>
+					<br />
+					The css button color scheme. You may choose the file as per
+					your choice.
+				</p>
+				<p class="paragraph-style-one">
+					<span>css/main-color-1.css</span><br />
+					<span>css/main-color-2.css</span><br />
+					<span>css/main-color-3.css</span><br />
+					<span>css/main-color-4.css</span><br />
+					<span>css/main-color-5.css</span>
+					<br />
+					The css main color scheme. You may choose the file as per
+					your choice.
+				</p>
+				<p class="paragraph-style-one">
+					<span>css/font-awesome.min.css</span>
+					<br />
+					The css file for font-awesome icons. To see all the
+					available icons and instructions on how to use them
+					click&nbsp;<a
+						href="http://fortawesome.github.io/Font-Awesome/icons/"
+						target="_blank"
+						>here</a
+					>
+				</p>
+				<p class="paragraph-style-one">
+					<span>css/bootstrap.min.css</span>
+					<br />
+					The main responsive grid stylesheets, from Bootstrap 3
+					framework. It is recommended to make any changes/additions
+					to style.css and keep bootsrap.css and bootsrap-theme.css as
+					it are. In this way, you can easily upgrade the grid
+					framework when Bootstrap releases an update.
+				</p>
+				<p class="paragraph-style-one">
+					<span>css/material.min.css</span>
+					<br />
+					The css file for Material Design Icons, Fonts, Buttons and
+					Froms.
+				</p>
+				<p class="paragraph-style-one">
+					<span>css/owl.carousel.css</span>
+					<br />
+					The css file for owl carousel.
+				</p>
+				<p class="paragraph-style-one">
+					<span>css/magnific-popup.css</span>
+					<br />
+					The css file for image, video and ajax content popup.
+				</p>
+				<p class="paragraph-style-one">
+					<span>css/animate.min.css</span>
+					<br />
+					The css file for animation effects.
+				</p>
+				<img src="assets/images/Screenshot_html3.png" alt="" />
+				<img src="assets/images/Screenshot_css1.png" alt="" />
+				<img src="assets/images/Screenshot_css2.png" alt="" />
+			</section>
+
+			<section id="javascript">
+				<div class="page-header">
+					<h3>JAVASCRIPT</h3>
+					<hr class="notop" />
+				</div>
+				<p class="paragraph-style-one">
+					<span>js/main.js</span>
+					<br />
+					The main script for the template
+				</p>
+				<p class="paragraph-style-one">
+					<span>js/jquery-3.1.0.min.js</span>
+					<br />
+					The jQuery Framework
+				</p>
+				<p class="paragraph-style-one">
+					<span>js/bootstrap.min.js</span>
+					<br />
+					The main js file that hook the supported scripts of
+					Bootstrap 3 framework&nbsp;
+				</p>
+				<p class="paragraph-style-one">
+					<span>js/material.min.js</span>
+					<br />
+					The main js file that using for material design buttons,
+					menus and css effects.
+				</p>
+				<p class="paragraph-style-one">
+					<span>js/animatescroll.min.js</span>
+					<br />
+					The script that using for menu scrolling animation
+				</p>
+				<p class="paragraph-style-one">
+					<span>js/jquery.validate.min.js</span>
+					<br />
+					The script that using for form validation
+				</p>
+				<p class="paragraph-style-one">
+					<span>js/jquery.waypoints.min.js</span>
+					<br />
+					The script that using for scroll events
+				</p>
+				<p class="paragraph-style-one">
+					<span>js/jquery.counterup.min.js</span>
+					<br />
+					The script that using for counter
+				</p>
+				<p class="paragraph-style-one">
+					<span>js/owl.carousel.min.js</span>
+					<br />
+					The script that using for slider
+				</p>
+				<p class="paragraph-style-one">
+					<span>https://platform.twitter.com/widgets.js</span>
+					<br />
+					The script that using for twitter widget
+				</p>
+				<p class="paragraph-style-one">
+					<span>js/jquery.tubular.1.0.js</span>
+					<br />
+					The script that using for video background
+				</p>
+				<p class="paragraph-style-one">
+					<span>js/jquery.retina.min.js</span>
+					<br />
+					The script that using for retina displays
+				</p>
+				<p class="paragraph-style-one">
+					<span>js/jquery.magnific-popup.min.js</span>
+					<br />
+					The script that using for image, video and ajax content
+					popups.
+				</p>
+				<p class="paragraph-style-one">
+					<span>js/isotope-docs.min.js</span>
+					<br />
+					The script that using for gallery section.
+				</p>
+				<img src="assets/images/Screenshot_html4.png" alt="" />
+				<img src="assets/images/Screenshot_js.png" alt="" />
+			</section>
+			<section id="source_and_creadits">
+				<div class="page-header">
+					<h2>SOURCE AND CREADITS</h2>
+					<hr class="notop" />
+				</div>
+
+				<h4>Photos:</h4>
+				<ul>
+					<li>
+						<strong
+							><i
+								>All '<u>images</u>' used on the demo site is
+								for demonstration purposes only and are not
+								included in the main download file.</i
+							></strong
+						>
+					</li>
+					<li>
+						<strong
+							>All Images Collected From
+							<i
+								><a href="https://images.google.com/"
+									>'Google Image Search'</a
+								></i
+							></strong
+						>
+					</li>
+				</ul>
+
+				<h4>Fonts Used:</h4>
+				<ul>
+					<li>
+						<strong>Google Fonts (Raleway)</strong> -
+						<a href="http://www.google.com/webfonts"
+							>http://www.google.com/webfonts</a
+						>
+					</li>
+					<li>
+						<strong>Font Awesome</strong> -
+						<a href="http://fontawesome.io/"
+							>http://fontawesome.io/</a
+						>
+					</li>
+				</ul>
+
+				<h4>Frameworks / Libraries:</h4>
+				<ul>
+					<li>
+						<strong>jQuery</strong> -
+						<a href="https://jquery.com/">https://jquery.com/</a>
+					</li>
+					<li>
+						<strong>Twitter Bootstrap</strong> -
+						<a href="http://getbootstrap.com"
+							>http://getbootstrap.com</a
+						>
+					</li>
+					<li>
+						<strong>Material Design Lite</strong> -
+						<a href="http://www.getmdl.io/"
+							>http://www.getmdl.io/</a
+						>
+					</li>
+				</ul>
+
+				<h4>Plugins Used:</h4>
+				<ul>
+					<li>
+						<strong>Owl Carousel</strong> -
+						<a href="https://github.com/OwlFonk/OwlCarousel"
+							>https://github.com/OwlFonk/OwlCarousel</a
+						>
+					</li>
+					<li>
+						<strong>jQuery Validation</strong> -
+						<a href="http://jqueryvalidation.org/"
+							>http://jqueryvalidation.org/</a
+						>
+					</li>
+					<li>
+						<strong>Twitter Post Fetcher</strong> -
+						<a
+							href="https://github.com/jasonmayes/Twitter-Post-Fetcher"
+							>https://github.com/jasonmayes/Twitter-Post-Fetcher</a
+						>
+					</li>
+					<li>
+						<strong>Magnific Popup</strong> -
+						<a href="https://github.com/lukehaas/Scrollify"
+							>http://dimsemenov.com/plugins/magnific-popup/</a
+						>
+					</li>
+					<li>
+						<strong>Isotope</strong> -
+						<a href="https://github.com/metafizzy/isotope"
+							>https://github.com/metafizzy/isotope</a
+						>
+					</li>
+					<li>
+						<strong>Waypoints</strong> -
+						<a href="https://github.com/imakewebthings/waypoints/"
+							>https://github.com/imakewebthings/waypoints/</a
+						>
+					</li>
+					<li>
+						<strong>jQuery CounterUP</strong> -
+						<a href="https://github.com/bfintal/Counter-Up"
+							>https://github.com/bfintal/Counter-Up</a
+						>
+					</li>
+					<li>
+						<strong>AnimateScroll</strong> -
+						<a href="http://plugins.compzets.com/animatescroll/"
+							>http://plugins.compzets.com/animatescroll/</a
+						>
+					</li>
+					<li>
+						<strong>Tubular</strong> -
+						<a href="http://www.seanmccambridge.com/tubular/"
+							>http://www.seanmccambridge.com/tubular/</a
+						>
+					</li>
+					<li>
+						<strong>RetinaJS</strong> -
+						<a href="https://github.com/imulus/retinajs"
+							>https://github.com/imulus/retinajs</a
+						>
+					</li>
+					<li>
+						<strong>Twitter Widget</strong> -
+						<a href="https://platform.twitter.com/widgets.js"
+							>https://platform.twitter.com/widgets.js</a
+						>
+					</li>
+				</ul>
+			</section>
+
+			<section id="logs">
+				<div class="page-header">
+					<h3>CHANGE LOGS</h3>
+					<hr class="notop" />
+				</div>
+
+				<!-- Changelog Item Start -->
+				<div class="changelog--item">
+					<p>
+						<strong
+							>08 August, 2018 - Version 2.9 (<a
+								href="changelogs/changelog-2.9.txt"
+								target="_blank"
+								>Changelog</a
+							>)</strong
+						>
+					</p>
+
+					<pre>// # List of updates
+// ------------------------------
+
+*. WHMCS template updated to be compatible with latest <strong>"WHMCS Version 7.6.0"</strong>
+</pre>
+				</div>
+				<!-- Changelog Item End -->
+
+				<!-- Changelog Item Start -->
+				<div class="changelog--item">
+					<p>
+						<strong
+							>24 April, 2018 - Version 2.8 (<a
+								href="changelogs/changelog-2.8.txt"
+								target="_blank"
+								>Changelog</a
+							>)</strong
+						>
+					</p>
+
+					<pre>// # List of updates
+// ------------------------------
+
+*. WHMCS template updated to be compatible with latest <strong>"WHMCS Version 7.5.1"</strong>
+</pre>
+				</div>
+				<!-- Changelog Item End -->
+
+				<!-- Changelog Item Start -->
+				<div class="changelog--item">
+					<p>
+						<strong
+							>04 April, 2018 - Version 2.7 (<a
+								href="changelogs/changelog-2.7.txt"
+								target="_blank"
+								>Changelog</a
+							>)</strong
+						>
+					</p>
+
+					<pre>// # List of updates
+// ------------------------------
+
+[*] Fixed 404 Page Background Image Repeating Issue
+
+[*] WHMCS template updated to be compatible with latest <strong>"WHMCS Version 7.5.0"</strong>
+</pre>
+				</div>
+				<!-- Changelog Item End -->
+
+				<!-- Changelog Item Start -->
+				<div class="changelog--item">
+					<p>
+						<strong
+							>17 January, 2018 - Version 2.6 (<a
+								href="changelogs/changelog-2.6.txt"
+								target="_blank"
+								>Changelog</a
+							>)</strong
+						>
+					</p>
+
+					<pre>// # List of updates
+// ------------------------------
+
+*. WHMCS template updated to be compatible with latest <strong>"WHMCS Version 7.4.2"</strong>
+</pre>
+				</div>
+				<!-- Changelog Item End -->
+
+				<!-- Changelog Item Start -->
+				<div class="changelog--item">
+					<p>
+						<strong
+							>22 November, 2017 - Version 2.5 (<a
+								href="changelogs/changelog-2.5.txt"
+								target="_blank"
+								>Changelog</a
+							>)</strong
+						>
+					</p>
+
+					<pre>// # List of updates
+// ------------------------------
+
+*. WHMCS template updated to be compatible with latest <strong>"WHMCS Version 7.4.1"</strong>
+</pre>
+				</div>
+				<!-- Changelog Item End -->
+
+				<!-- Changelog Item Start -->
+				<div class="changelog--item">
+					<p>
+						<strong
+							>11 October, 2017 - Version 2.4 (<a
+								href="changelogs/changelog-2.4.txt"
+								target="_blank"
+								>Changelog</a
+							>)</strong
+						>
+					</p>
+
+					<pre>// # List of updates
+// ------------------------------
+
+*. WHMCS template updated to be compatible with latest <strong>"WHMCS Version 7.3.0"</strong>
+</pre>
+				</div>
+				<!-- Changelog Item End -->
+
+				<!-- Changelog Item Start -->
+				<div class="changelog--item">
+					<p>
+						<strong
+							>30 May, 2017 - Version 2.3 (<a
+								href="changelogs/changelog-2.3.txt"
+								target="_blank"
+								>Changelog</a
+							>)</strong
+						>
+					</p>
+
+					<pre>// # List of updates
+// ------------------------------
+
+*. WHMCS template updated to be compatible with latest <strong>"WHMCS Version 7.2"</strong>
+</pre>
+				</div>
+				<!-- Changelog Item End -->
+
+				<!-- Changelog Item Start -->
+				<div class="changelog--item">
+					<p>
+						<strong
+							>18 January, 2017 - Version 2.2 (<a
+								href="changelogs/changelog-2.2.txt"
+								target="_blank"
+								>Changelog</a
+							>)</strong
+						>
+					</p>
+
+					<pre>
+// # List of updates
+// ------------------------------
+
+*. PHPMailer security update
+</pre
+					>
+				</div>
+				<!-- Changelog Item End -->
+
+				<p style="font-size: 16px;">
+					<strong
+						>28 December, 2016 - Version 2.1 (<a
+							href="changelogs/changelog-2.1.txt"
+							>Changelog</a
+						>)</strong
+					>
+				</p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>
+// # List of updates
+// ------------------------------
+
+[*] PHPMailer security updated
+</pre
+				>
+
+				<p style="font-size: 16px;">
+					<strong
+						>19 December, 2016 - Version 2.0 (<a
+							href="changelogs/changelog-2.0.txt"
+							>Changelog</a
+						>)</strong
+					>
+				</p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>// # List of updates
+// ------------------------------
+
+[+] WHMCS template updated to be compatible with latest <strong>"WHMCS Version 7.1"</strong> (For more information on changes of file to file, please look at it on <a href="https://github.com/WHMCS/templates-six/compare/v7.0.1-release.1...v7.1.0-release.1">github</a>)
+[-] We stop offering an order form template with WHMCS for WHMCS 7.x, as you can use any standard WHMCS order form.
+</pre>
+
+				<p style="font-size: 16px;">
+					<strong
+						>08 October, 2016 - Version 1.5 (<a
+							href="changelogs/changelog-1.5.txt"
+							>Changelog</a
+						>)</strong
+					>
+				</p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>// # List of updates
+// ------------------------------
+
+[+] WHMCS template and orderforms updated to be compatible with latest <strong>"WHMCS Version 7"</strong>
+</pre>
+
+				<p style="font-size: 16px;">
+					<strong>20 September, 2016 - Version 1.4</strong>
+				</p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>// # List of updates
+// ------------------------------
+
+[+] domain search form now redirects to whmcs domain search form (files affected: <strong>index.html, domains.html</strong>)
+[+] login form now lets you login to whmcs from your html login page (files affected: <strong>login.html</strong>)
+[+] added tawk live chat widget (files affected: <strong>main.js</strong>)
+</pre>
+
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>
+// # List of fixed
+// ------------------------------
+
+[*] fixed whmcs form placeholder text color
+[*] fixed feedback area issue on IE11
+[*] fixed pricing table area issue on IE11
+[*] fixed blog area issue on IE11
+</pre
+				>
+
+				<p style="font-size: 16px; margin-bottom: 5px;">
+					<strong>HOW TO UPDATE THE "DOMAIN SEARCH FORM"?</strong>
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					1. Open 'index.html' file
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					2. Find the comment
+					<strong
+						><i>"&lt;!-- Domain Search Area Start -->"</i></strong
+					>
+				</p>
+				<p style="font-size: 14px; margin-top: 0;">
+					3. Compare the code with the new one below by you or, with
+					this
+					<a href="https://www.diffchecker.com/diff" target="_blank"
+						>tool</a
+					>
+					then replace necessary changes
+				</p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				><strong>&lt;!-- Domain Search Area Start -->
+&lt;div id="domainSearch">
+    &lt;div class="container">
+        &lt;div class="row">
+            &lt;div class="col-md-6">
+                &lt;form action="http://billing.ywhmcs.com/domainchecker.php?systpl=MatRozHostCV1" method="post">
+                    &lt;div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        &lt;input type="text" name="domain" class="mdl-textfield__input" />
+                        &lt;label class="mdl-textfield__label" for="subscribeFormInput">Enter Your Domain Name Here...&lt;/label>
+                    &lt;/div>
+                    &lt;div class="mdl-textfield select-box">
+                        &lt;select name="ext">
+                            &lt;option selected>.com&lt;/option>
+                            &lt;option>.net&lt;/option>
+                            &lt;option>.org&lt;/option>
+                        &lt;/select>
+                    &lt;/div>
+                    &lt;button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--accent">Search&lt;/button>
+                &lt;/form>
+            &lt;/div>
+            &lt;div class="col-md-6">
+                &lt;div class="domain-ext">
+                    &lt;div class="extension">
+                        &lt;span class="name">.com&lt;/span>
+                        &lt;span>$3.99/year&lt;/span>
+                    &lt;/div>
+                    &lt;div class="extension">
+                        &lt;span class="name">.net&lt;/span>
+                        &lt;span>$3.99/year&lt;/span>
+                    &lt;/div>
+                    &lt;div class="extension">
+                        &lt;span class="name">.org&lt;/span>
+                        &lt;span>$3.99/year&lt;/span>
+                    &lt;/div>
+                    &lt;div class="extension">
+                        &lt;span class="name">.info&lt;/span>
+                        &lt;span>$3.99/year&lt;/span>
+                    &lt;/div>
+                    &lt;div class="extension">
+                        &lt;span class="name">.us&lt;/span>
+                        &lt;span>$3.99/year&lt;/span>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+&lt;!-- Domain Search Area End --></strong></pre>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					4. Follow the steps about 1, 2, 3 for 'domains.html' file
+				</p>
+
+				<p style="font-size: 16px; margin-bottom: 5px;">
+					<strong>HOW TO UPDATE THE "LOGIN FORM"?</strong>
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					1. Open 'login.html' file
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					2. Find the comment
+					<strong
+						><i>"&lt;!-- Registration Area Start -->"</i></strong
+					>
+				</p>
+				<p style="font-size: 14px; margin-top: 0;">
+					3. Compare the code with the new one below by you or, with
+					this
+					<a href="https://www.diffchecker.com/diff" target="_blank"
+						>tool</a
+					>
+					then replace necessary changes
+				</p>
+				<strong>HTML:</strong>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				><strong>&lt;!-- Registration Area Start -->
+&lt;div id="registration">
+    &lt;div class="container">
+        &lt;div class="row">
+            &lt;div class="col-md-4 col-md-offset-4 reg--login">
+                &lt;form action="http://billing.ywhmcs.com/dologin.php?systpl=MatRozHostCV1" method="post">
+                    &lt;div class="mdl-card mdl-shadow--2dp">
+                        &lt;div class="mdl-card__supporting-text">
+                            &lt;div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                &lt;input class="mdl-textfield__input" type="text" name="username" id="loginEmail">
+                                &lt;label class="mdl-textfield__label" for="loginEmail">Email&lt;/label>
+                            &lt;/div>
+                            &lt;div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                &lt;input class="mdl-textfield__input" type="password" name="password" id="loginPass">
+                                &lt;label class="mdl-textfield__label" for="loginPass">Password&lt;/label>
+                            &lt;/div>
+                            &lt;div class="mdl-textfield">
+                                &lt;label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="loginRemember">
+                                    &lt;input type="checkbox" name="rememberme" id="loginRemember" class="mdl-checkbox__input">
+                                    Remember Me
+                                &lt;/label>
+                            &lt;/div>
+                            &lt;button type="submit" class="submit-btn mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--accent">Login&lt;/button>
+                            &lt;a href="http://billing.ywhmcs.com/pwreset.php?systpl=MatRozHostCV1" class="helper-link mdl-button mdl-js-button mdl-js-ripple-effect">Forgot Password?&lt;/a>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/form>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+&lt;!-- Registration Area End --></strong></pre>
+
+				<p style="font-size: 16px; margin-bottom: 5px;">
+					<strong>HOW TO UPDATE/ADD "TAWK LIVE CHAT WIDGET"?</strong>
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					1. Open 'main.js' file
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					2. Find the comment <strong><i>"* COUNTER"</i></strong>
+				</p>
+				<p style="font-size: 14px; margin-top: 0;">
+					3. Insert the below code before the comment
+					<strong><i>"* COUNTER"</i></strong>
+				</p>
+				<strong>JS:</strong>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				><strong>/* ------------------------------------------------------------------------- *
+ * LIVE CHAT WIDGET
+ * ------------------------------------------------------------------------- */
+var Tawk_API = Tawk_API || {},
+    Tawk_LoadStart = new Date(),
+    $tawk = document.createElement("script");
+
+$tawk.async=true;
+$tawk.src='https://embed.tawk.to/57dfd4b85dc7a25e92808cf6/default';
+$tawk.charset='UTF-8';
+$tawk.setAttribute('crossorigin','*');
+
+$($tawk).appendTo('body');</strong></pre>
+
+				<p style="font-size: 16px; margin-bottom: 5px;">
+					<strong
+						>HOW TO FIX "WHMCS FORM PLACEHOLDER TEXT COLOR"?</strong
+					>
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					1. Open 'matrozhost-style.css' file
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					2. Find the comment <strong><i>"GENERAL STYLES"</i></strong>
+				</p>
+				<p style="font-size: 14px; margin-top: 0;">
+					3. Remove the below code:
+				</p>
+				<strong>CSS:</strong>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				><strong>.form-control::-webkit-input-placeholder {
+    color: #fff;
+}
+.form-control::-moz-placeholder {
+    color: #fff;
+}
+.form-control::-ms-input-placeholder {
+    color: #fff;
+}</strong></pre>
+
+				<p style="font-size: 16px; margin-bottom: 5px;">
+					<strong>HOW TO FIX "FEEDBACK AREA ISSUE (IE11)"?</strong>
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					1. Open 'style.css' file
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					2. Find the class name
+					<strong><i>".feedback-item .mdl-card {"</i></strong>
+				</p>
+				<p style="font-size: 14px; margin-top: 0;">
+					3. Update the <strong>width</strong> property value to
+					<strong><i>"initial"</i></strong
+					>:
+				</p>
+				<strong>CSS:</strong>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				><strong>.feedback-item .mdl-card {
+    width: initial;
+    min-height: 0;
+    overflow: visible;
+}</strong></pre>
+
+				<p style="font-size: 16px; margin-bottom: 5px;">
+					<strong
+						>HOW TO FIX "PRICING TABLE AREA ISSUE (IE11)"?</strong
+					>
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					1. Open 'style.css' file
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					2. Find the class name
+					<strong
+						><i
+							>".pricing-table-item .mdl-card__title-text"</i
+						></strong
+					>
+				</p>
+				<p style="font-size: 14px; margin-top: 0;">
+					3. Remove the overflow property and add
+					<strong><i>width: 100%;</i></strong> property
+				</p>
+				<strong>CSS:</strong>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				><strong>.pricing-table-item .mdl-card__title-text {
+    width: 100%;
+}</strong></pre>
+
+				<p style="font-size: 16px; margin-bottom: 5px;">
+					<strong>HOW TO FIX "BLOG AREA ISSUE (IE11)"?</strong>
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					1. Open 'style.css' file
+				</p>
+				<p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">
+					2. Find the class name
+					<strong><i>".post-item .mdl-card__title"</i></strong>
+				</p>
+				<p style="font-size: 14px; margin-top: 0;">
+					3. Add two new properties <strong><i>width</i></strong> and
+					<strong><i>overflow</i></strong>
+				</p>
+				<strong>CSS:</strong>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				><strong>.post-item .mdl-card__title {
+    padding: 0;
+    display: block;
+    <mark><i>
+    width: 100%;
+    overflow: hidden;
+    </i></mark>
+}</strong></pre>
+
+				<p style="font-size: 16px;">
+					<strong>2016 August 28 – Version 1.3</strong>
+				</p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>
+// # List of updated
+// ------------------------------
+
+[-] removed old twitter api
+[+] added new twitter widget
+</pre
+				>
+
+				<p
+					style="
+						font-size: 16px;
+						margin-top: 60px;
+						margin-bottom: 5px;
+					"
+				>
+					<strong>HOW TO UPGRADE THE TWITTER WIDGET?</strong>
+				</p>
+
+				<p style="font-size: 14px; margin-top: 0;">
+					1. Please, find the comments and include below
+					<strong>'markup'</strong> in <strong>'.html'</strong> file:
+				</p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>&lt;!-- Latest Tweets Widget Start -->
+&lt;div class="col-md-3 col-sm-4">
+    &lt;section class="latest-tweets-widget">
+        <del>&lt;h2 class="footer-title">latest tweets&lt;/h2></del>
+        <del>&lt;div id="tweets" data-twitter-id="697371631589711872">&lt;/div></del>
+    &lt;/section>
+&lt;/div>
+&lt;!-- Latest Tweets Widget End -->
+
+becomes:
+
+&lt;!-- Latest Tweets Widget Start --&gt;
+&lt;div class="twitter"&gt;
+    <strong>&lt;div id="footerTwitter" data-user-name="themelooks"&gt;&lt;/div&gt;</strong>
+&lt;/div&gt;
+&lt;!-- Latest Tweets Widget End --&gt;
+</pre>
+				<p style="font-size: 14px; margin-top: 0;">and</p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				><del>&lt;!-- ====Twitter Fetcher Plugin Script==== --&gt;
+&lt;script src="js/twitterFetcher.min.js"&gt;&lt;/script&gt;</del>
+
+becomes:
+
+<strong>&lt;!-- ====Twitter Widget==== --&gt;
+&lt;script src="https://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;</strong>
+</pre>
+
+				<p style="font-size: 14px; margin-top: 0;">
+					2. Please, find the comments and include below
+					<strong>'CSS'</strong> in
+					<strong>'css/style.css'</strong> file:
+				</p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>/* 15-3 TWITTER WIDGET */
+<strong>#footerTwitter {
+    max-height: 185px;
+    background-color: #fff;
+    overflow: auto;
+}</strong>
+</pre>
+				<p style="font-size: 14px; margin-top: 0;">and</p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>/*------------------------------------*\
+    21. BLOG PAGE
+\*------------------------------------*/
+<strong>#sidebarTwitter {
+    max-height: 270px;
+    border: 1px solid #e9e9e9;
+    overflow: auto;
+}</strong>
+</pre>
+
+				<p style="font-size: 14px; margin-top: 0;">
+					3. Please, find the comments and include below
+					<strong>'javascript'</strong> in
+					<strong>'main.js'</strong> file:
+				</p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				><del>/* ------------------------------------------------------------------------- *
+ * TWITTER FEED
+ * ------------------------------------------------------------------------- */
+var tweetsContainer = $('#tweets');
+
+if ( tweetsContainer.length ) {
+    var config = {
+        "id": tweetsContainer.data('twitter-id'),
+        "domId": 'tweets',
+        "maxTweets": tweetsContainer.data('posts'),
+        "showTime": false,
+        "showUser": false,
+        "showInteraction": false
+    };
+
+    twitterFetcher.fetch(config);
+}
+
+var tweets2Container = $('#tweets2');
+
+if ( tweets2Container.length ) {
+    var config2 = {
+        "id": tweets2Container.data('twitter-id'),
+        "domId": 'tweets2',
+        "maxTweets": tweets2Container.data('posts'),
+        "showTime": false,
+        "showUser": false,
+        "showInteraction": false
+    };
+
+    twitterFetcher.fetch(config2);
+}</del>
+
+becomes:
+        
+<strong>/* ------------------------------------------------------------------------- *
+ * TWITTER WIDGET
+ * ------------------------------------------------------------------------- */
+var $footerTwitter = $('#footerTwitter');
+
+if ( $footerTwitter.length ) {
+    twttr.widgets.createTimeline({
+        sourceType: "profile",
+        screenName: $footerTwitter.data('user-name')
+    }, document.getElementById('footerTwitter'));
+}
+
+var $sidebarTwitter = $('#sidebarTwitter');
+
+if ( $sidebarTwitter.length ) {
+    twttr.widgets.createTimeline({
+        sourceType: "profile",
+        screenName: $sidebarTwitter.data('user-name')
+    }, document.getElementById('sidebarTwitter'));
+}</strong>
+</pre>
+
+				<p style="font-size: 16px;">
+					<strong>2016 July 21 – Version 1.2</strong>
+				</p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>
+// # List of changes
+// ------------------------------
+
+[new]  added Material Design Hosting Template
+[new]  added 5 Different WHMCS Template with 5 Different Colors
+</pre
+				>
+
+				<p style="font-size: 16px;">
+					<strong>2016 May 26 – Version 1.1</strong>
+				</p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>
+// # List of changes
+// ------------------------------
+
+[new]  added support for high resolution
+[new]  added support for retina displays
+
+[fixed]  back to top button isssue fixed
+[fixed]  responsive issue fixed
+</pre
+				>
+
+				<p style="font-size: 16px;">
+					<strong>HOW TO FIX BACK TO TOP BUTTON ISSUE?</strong>
+				</p>
+				<p style="font-size: 16px;"><strong>CSS:</strong></p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>
+/* 1-6 BACK TO TOP BUTTON */
+#backToTop {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity .25s ease-in-out;
+            transition: opacity .25s ease-in-out;
+    <strong>z-index: 1;</strong>
+}
+</pre>
+
+				<p style="font-size: 16px;">
+					<strong>HOW TO FIX RESPONSIVE ISSUES?</strong>
+				</p>
+				<p style="font-size: 16px;"><strong>CSS:</strong></p>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>
+@media screen and (max-width: 991px) {
+    /* TOP NAV AREA */
+    #topNavbar li a {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    /* HEADER AREA */
+    .header-img .header-img-slider {
+        left: 46.3px;
+    }
+    
+    /* CALL TO ACTION AREA */
+    #callToAction {
+        text-align: center;
+    }
+    #callToAction a {
+        margin-top: 30px;
+    }
+    
+    /* FEATUER AREA */
+    .feature-item {
+        margin-bottom: 70px;
+    }
+    .feature-item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* ABOUT ARAE */
+    #about:before,
+    #about:after {
+        display: none;
+    }
+    <strong>.about-page-team:before {
+        display: none;
+    }</strong>
+    .team-item {
+        margin: 0;
+    }
+    .section-title.team-title {
+        color: #222;
+        margin-right: 0;
+        text-align: center;
+    }
+    .section-title.team-title:before {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    
+    /* SUBSCRIBE FROM */
+    #subscribeForm {
+        margin-bottom: 20px;
+    }
+    
+    /* APP FEATURES AREA */
+    .app-features-img,
+    .dev-img {
+        text-align: center;
+    }
+    .app-features-img .section-title,
+    .dev-img .section-title {
+        float: none;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+        margin: 0 0 70px;
+        text-align: center;
+    }
+    
+    /* TEAM AREA */
+    .about-description {
+        margin-top: 50px;
+    }
+    
+    /* FEEDBACK AREA */
+    .feedback-item {
+        margin-bottom: 20px;
+    }
+    #feedback {
+        padding-bottom: 50PX;
+    }
+    
+    /* PORTFOLIO AREA */
+    .portfolio-item {
+        width: 25%;
+    }
+    .portfolio-item.width-25 {
+        width: 50%;
+    }
+    
+    /* FACTS */
+    .facts {
+        margin-bottom: 50px;
+    }
+    
+    /* BLOG AREA */
+    .post-item {
+        margin-bottom: 30px;
+    }
+    
+    /* CONTACT AREA */
+    .contact-address address {
+        margin-bottom: 30px;
+    }
+    #contact {
+        padding-bottom: 65px;
+    }
+    
+    /* CONTACT PAGE */
+    #contact.page {
+        padding-bottom: 65px !important;
+    }
+    
+    /* BLOG PAGE */
+    .eq-height-left:before, .eq-height-right:before {
+        display: none;
+    }
+    
+    .categories-widget .nav-tabs > li {
+        display: table-cell;
+        width: 1%;
+    }
+    
+    /* COLOR SWICTHER */
+    #open-switcher,
+    #close-switcher,
+    #demo-colors {
+        display: none;
+    }
+}
+</pre>
+				<pre
+					style="
+						font-family: 'Courier New';
+						font-size: 14px;
+						line-height: 18px;
+						background-color: #f5f5f5;
+						background-image: -webkit-gradient(
+							linear,
+							50% 0%,
+							50% 100%,
+							color-stop(50%, #f5f5f5),
+							color-stop(50%, #e6e6e6)
+						);
+						background-image: -webkit-linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-image: linear-gradient(
+							#f5f5f5 50%,
+							#e6e6e6 50%
+						);
+						background-size: 36px 36px;
+						border: 1px solid #e9e9e9;
+						padding-left: 5px;
+					"
+				>
+/* 1-4 EXTRA SMALL DEVICES, PHONES */
+@media screen and (max-width: 480px) {
+    /* Primary Area */
+    .primary-social-menu-links {
+        display: none;
+    }
+    <strong>ul.primary-menu-links > li > span.phone {
+        display: none;
+    }</strong>
+
+    /* PORTFOLIO AREA */
+    .portfolio-item {
+        width: 50%;
+    }
+    .portfolio-item.width-25 {
+        width: 100%;
+    }
+    
+    /* TOP NAV AREA */
+    #topNav .breadcrumb,
+    #topNav .back-button {
+        display: none;
+    }
+    
+    <strong>/* TESTIMONIAL AREA */
+    .feedback-wrapper .container {
+        padding: 0;
+    }
+    .feedback-items {
+        width:100vw;
+    }</strong>
+    
+    /* GENERAL PAGE HEADER */
+    .page-title h2 {
+        margin-bottom: 40px;
+    }
+    
+    #pageHeader .breadcrumb {
+        display: block;
+    }
+    
+    /* PRICING TABLE */
+    .pct-img figcaption .pct-tag {
+        bottom: 10px;
+    }
+}
+</pre>
+			</section>
+
+			<section id="faq">
+				<div class="page-header">
+					<h3>FAQ</h3>
+					<hr class="notop" />
+				</div>
+
+				<!-- Question Item Start -->
+				<h3><strong>Q. How To Change Theme Color Scheme?</strong></h3>
+				<p><strong>For HTML Template:</strong></p>
+				<ul>
+					<li>
+						Open <strong>'.html'</strong> file. (For Example:
+						<strong>'index.html'</strong>)
+					</li>
+					<li>
+						Find the comment
+						<strong>'Main Color Scheme CSS'</strong>
+					</li>
+					<li>
+						Update the file name
+						<strong>'theme-color-1.css'</strong> to
+						<strong>'theme-color-x.css'</strong> or change/update
+						the color code with your desire/brand color code in the
+						<strong>'theme-color-1.css'</strong> file.
+					</li>
+				</ul>
+				<img
+					src="assets/images/theme-color-stylesheet.png"
+					alt=""
+					class="img-responsive"
+				/>
+				<p>Available Color Schemes:</p>
+				<img
+					src="assets/images/theme-color-stylesheet-list.png"
+					alt=""
+					class="img-responsive"
+				/>
+				<p><strong>For WHMCS Template:</strong></p>
+				<ul>
+					<li>
+						Open <strong>'head.tpl'</strong> file from the
+						<strong>includes</strong> folder.
+					</li>
+					<li>
+						Update the file name
+						<strong>'theme-color-1.css'</strong> to
+						<strong>'theme-color-x.css'</strong> or change/update
+						the color code with your desire/brand color code in the
+						<strong>'theme-color-1.css'</strong> file.
+					</li>
+				</ul>
+				<!-- Question Item End -->
+
+				<h3><strong>How can I change the "Logo"?</strong></h3>
+				<ul>
+					<li>
+						Open Up your Desired
+						<strong><i>'.html'</i></strong> file. (For Example,
+						<strong>'index.html'</strong>)
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong><i>'&lt;!-- Logo Start --&gt;'</i></strong>
+					</li>
+					<li>
+						Update
+						<strong
+							><i
+								>''&lt;span
+								class="first"&gt;Mat&lt;/span&gt;'&lt;span
+								class="second"&gt;Roz'&lt;!/span&gt;'</i
+							></strong
+						>
+						text from there.
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/logo_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong>How can I change "Slider Image and Text"?</strong>
+				</h3>
+				<p>
+					<strong
+						><i
+							>Make sure first you put your 'slider images' in the
+							'/img/header-slider-content' folder.</i
+						></strong
+					>
+				</p>
+				<ul>
+					<li>
+						Open Up <strong><i>'index.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comments
+						<strong
+							><i
+								>'&lt;!-- Header Content Start --&gt;'</i
+							></strong
+						>
+						and
+						<strong
+							><i>'&lt;!-- Header Image Start --&gt;'</i></strong
+						>
+					</li>
+					<li>
+						Update The
+						<strong><i>'image link and content'</i></strong> from
+						there
+					</li>
+				</ul>
+				<strong>OR,</strong>
+				<ul>
+					<li>
+						Save Your <i>'Slider Images'</i> To The Specific Names.
+						(For Example: <strong>'computer.jpg</strong>,
+						<strong>'person.jpg</strong>)
+					</li>
+					<li>
+						Then Put The Images To The
+						<strong><i>'/img/header-slider-content'</i></strong>
+						Folder
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/slider_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "Slider Background Image"?</strong
+					>
+				</h3>
+				<p>
+					<strong
+						><i
+							>Make sure first you put your 'slider images' in the
+							'/img/header-slider-bg' folder.</i
+						></strong
+					>
+				</p>
+				<ul>
+					<li>
+						Open Up <strong><i>'index.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i>'&lt;!-- Header Item Start --&gt;'</i></strong
+						>
+					</li>
+					<li>
+						Update The
+						<strong
+							><i
+								>'data-bg-path="img/header-slider-bg/01.jpg"'</i
+							></strong
+						>
+						path from there
+					</li>
+				</ul>
+				<strong>OR,</strong>
+				<ul>
+					<li>
+						Save Your <i>'Slider Background Images'</i> To The
+						Specific Names. (For Example: <strong>'01.jpg</strong>,
+						<strong>'02.jpg</strong>)
+					</li>
+					<li>
+						Then Put The Images To The
+						<strong><i>'/img/header-slider-bg'</i></strong> Folder
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/slider-img_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "Slider Background Video
+						Link"?</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open Up your Desired
+						<strong><i>'index.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'&lt;!-- Header Video Item Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update The
+						<strong><i>'data-video-id="2GqExKSwTEA"'</i></strong>
+						link from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/bg-video-id_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "Slider Price Tags" (Hosting
+						Version)?</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open Up your Desired
+						<strong><i>'index.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i>'&lt;!-- Header Image Start --&gt;'</i></strong
+						>
+					</li>
+					<li>Update The Price and Text from there.</li>
+				</ul>
+				<br />
+				<img src="assets/images/slider_badge.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change "Progress Bar Value" (Team Skills
+						Section)?</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open Up your Desired
+						<strong><i>'.html'</i></strong> file. (For Example,
+						<strong>'index.html'</strong>)
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i>'&lt;!-- Team Skills Start --&gt;'</i></strong
+						>
+					</li>
+					<li>
+						Adjust The
+						<strong><i>'aria-valuenow="50"'</i></strong> and
+						<strong><i>'&lt;span&gt;50%&lt;/span&gt;'</i></strong>
+						from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/team_skill.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change "Counter Value" (About
+						Secion/Page)?</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open Up your Desired
+						<strong><i>'index.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i>'&lt;!-- Facts Item Start --&gt;'</i></strong
+						>
+					</li>
+					<li>
+						Change The Numbers
+						<strong
+							><i
+								>'&lt;div
+								class="facts-number"&gt;2,500&lt;/div&gt;'</i
+							></strong
+						>
+						from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/counter-vlue_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3><strong>How to enable or disable Team Slider?</strong></h3>
+				<ul>
+					<li>
+						Open Your Desired <strong><i>'.html'</i></strong> file.
+						(For Example, <strong>'index.html'</strong>)
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i>'&lt;!-- Team Items Start --&gt;'</i></strong
+						>
+					</li>
+					<li>
+						Then Find "class="team-items team-items-slider". By
+						Default the slider is active. If you Disable the slider
+						just remove "team-items-slider" from class.OK Thats it.
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/team_slider.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change "Name, Image, and Social
+						Links"?</strong
+					>
+				</h3>
+				<p>
+					<strong
+						><i
+							>Make sure first you put your 'images' in the
+							'/img/team-members' folder.</i
+						></strong
+					>
+				</p>
+				<ul>
+					<li>
+						Open Your Desired <strong><i>'.html'</i></strong> file.
+						(For Example, <strong>'index.html'</strong>)
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i>'&lt;!-- Team Items Start --&gt;'</i></strong
+						>
+					</li>
+					<li>
+						Update The
+						<strong><i>'Name, Image and Social Links'</i></strong>
+						from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/team_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "Mailchimp Subscription
+						Link"?</strong
+					>
+				</h3>
+				<p>
+					<strong
+						>We added a speacial feature 'mailchimp interrogation
+						support' on this theme and will be add it to our future
+						themes also.</strong
+					>
+				</p>
+				<ul>
+					<li>
+						Open Up your Desired
+						<strong><i>'index.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'&lt;!-- Mailchimp From Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update The
+						<strong><i>'action="..."'</i></strong> attribute address
+						from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/subscribe_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3><strong>How can I change the "Video Popup"?</strong></h3>
+				<ul>
+					<li>
+						Open Up your Desired
+						<strong><i>'index.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'&lt;!-- Video Popup Area Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update The <strong><i>'YouTube Link'</i></strong> from
+						there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/video-popup.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong>How can I change the "Portfolio Images"?</strong>
+				</h3>
+				<p>
+					<strong
+						><i
+							>Make sure first you put your 'slider images' in the
+							'/img/portfolio-img' folder.</i
+						></strong
+					>
+				</p>
+				<ul>
+					<li>
+						Open Up your Desired
+						<strong><i>'.html'</i></strong> file. (For Example,
+						<strong>'index.html'</strong>)
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'&lt;!-- Portfolio Item Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update The
+						<strong
+							><i
+								>'img/portfolio-img/portfolio-img-1.jpg'</i
+							></strong
+						>
+						image path from there
+					</li>
+				</ul>
+				<strong>OR,</strong>
+				<ul>
+					<li>
+						Save Your <i>'Portfolio Images'</i> To The Specific
+						Names. (For Example:
+						<strong>'portfolio-img-1.png'</strong>,
+						<strong>'portfolio-img-2.png'</strong>, etc...)
+					</li>
+					<li>
+						Then Put The Images To The
+						<strong><i>'/img/portfolio-img'</i></strong> Folder
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/portfolio-img.png" alt="" />
+				<br />
+				<br />
+
+				<h3><strong>How can I change "Pricing Table"?</strong></h3>
+				<ul>
+					<li>
+						Open Your Desired <strong><i>'.html'</i></strong> file.
+						(For Example, <strong>'index.html'</strong>)
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'&lt;!-- Pricing Table Item Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update The
+						<strong><i>'Price, Features and Link'</i></strong> from
+						there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/pricing-table_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong>How can I change "Feedback Text and Image"?</strong>
+				</h3>
+				<ul>
+					<li>
+						Open Up your Desired
+						<strong><i>'index.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i>'&lt;!-- Feedback Item Start --&gt;'</i></strong
+						>
+					</li>
+					<li>
+						Update The Image
+						<strong><i>'img/feedbacks/client-01.jpg'</i></strong>
+						and Text from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/testimonial-1.png" alt="" />
+				<br />
+				<br />
+
+				<h3><strong>How can I change "Blog Images"?</strong></h3>
+				<p>
+					<strong
+						><i
+							>Make sure first you put your 'slider images' in the
+							'/img/blog-posts' folder.</i
+						></strong
+					>
+				</p>
+				<ul>
+					<li>
+						Open Up your Desired <strong><i>'.html'</i></strong
+						>. (For Example, <strong>'index.html'</strong>)
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong><i>'&lt;!-- Post Item Start --&gt;'</i></strong>
+					</li>
+					<li>
+						Update The
+						<strong
+							><i>'img/blog-posts/latest-post-1.jpg'</i></strong
+						>
+						image path from there
+					</li>
+				</ul>
+				<strong>OR,</strong>
+				<ul>
+					<li>
+						Save Your <i>'Blog Images'</i> To The Specific Names.
+						(For Example: <strong>'latest-post-1.png'</strong>,
+						<strong>'latest-post-2.png'</strong>, etc...)
+					</li>
+					<li>
+						Then Put The Images To The
+						<strong><i>'/img/blog-posts'</i></strong> Folder
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/testimonial-1.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong>How can I change the "Contact Address"?</strong>
+				</h3>
+				<ul>
+					<li>
+						Open Your Desired <strong><i>'.html'</i></strong> file.
+						(For Example, <strong>'index.html'</strong>)
+					</li>
+					<li>
+						Then Search For
+						<strong
+							><i
+								>'&lt;!-- Contact Address Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update The Address:
+						<strong
+							><i
+								>'1234 12th Avenue NW, East Shawarapara,
+								Dhaka'</i
+							></strong
+						>, Phone Number:
+						<strong><i>'+444 1111 222 333'</i></strong> and Email
+						Address: <strong><i>example@example.com</i></strong>
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/contact-info_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "Domain Search form action link"
+						for my website to work with WHMCS?</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open Your Desired <strong><i>'.html'</i></strong> file.
+						(For example, index.html/domain.html)
+					</li>
+					<li>
+						Then search for the comment
+						<strong
+							><i
+								>'&lt;!-- Domain Search Area Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update the form action link
+						<strong
+							><i
+								>'action="http://subdomain.yourdomain.com/domainchecker.php"'</i
+							></strong
+						>
+						with your website url.
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/whmcs_domain_link.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "Login Form action/forgot
+						password/register link" for my website to work with
+						WHMCS?</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open <strong><i>'login.html'</i></strong> file.
+					</li>
+					<li>
+						Then search for the comment
+						<strong
+							><i
+								>'&lt;!-- Registration Area Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update the links with your website url.
+						<ul style="margin: 0;">
+							<li>
+								<strong
+									>Example Form Action Link:
+									<code
+										><i
+											>action="http://subdomain.yourdomain.com/dologin.php"</i
+										></code
+									></strong
+								>
+							</li>
+							<li>
+								<strong
+									>Example Register Now Link:
+									<code
+										><i
+											>action="http://subdomain.yourdomain.com/pwreset.php"</i
+										></code
+									></strong
+								>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/whmcs_login_link.png" alt="" />
+				<br />
+				<br />
+
+				<h3><strong>How can I change "Live Chat Widget"?</strong></h3>
+				<ul>
+					<li>
+						Open <strong><i>'main.js'</i></strong> file.
+					</li>
+					<li>
+						Then search for the comment
+						<strong><i>'LIVE CHAT WIDGET'</i></strong>
+					</li>
+					<li>
+						Update the widget code with your own widget code.
+						<a
+							href="https://www.tawk.to/knowledgebase/getting-started/adding-a-widget-to-your-website/"
+							>Read this?</a
+						>
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/live_chat_widget.png" alt="" />
+				<br />
+				<br />
+
+				<h3><strong>How can I change "Copyright Text"?</strong></h3>
+				<ul>
+					<li>
+						Open Your Desired <strong><i>'.html'</i></strong> file.
+						(For Example, <strong>'index.html'</strong>)
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'&lt;!-- Copyright Area Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update The
+						<strong
+							><i>'&lt;a href="#"&gt;MatRoz&lt;/a&gt;'</i></strong
+						>
+						from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/copyright_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "YouTube Video Link" (Blog
+						Page)?</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open Up your <strong><i>'blog.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'&lt;!-- Post YouTube Video Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update The Link
+						<strong
+							><i
+								>'https://www.youtube.com/embed/WDMWOiJb3CA?showinfo=0&controls=0&rel=0'</i
+							></strong
+						>
+						from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/youtube-video_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "Vimeo Video Link" (Blog
+						Page)?</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open Up your <strong><i>'blog.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'&lt;!-- Post Vimeo Video Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update The Link
+						<strong
+							><i
+								>'https://player.vimeo.com/video/154190504?byline=0'</i
+							></strong
+						>
+						from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/vimeo-video_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "Local Video Link" (Blog
+						Page)?</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open Up your <strong><i>'blog.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'&lt;!-- Post Local Video Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update The
+						<strong><i>'media/video.mp4'</i></strong> from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/local-video_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "Soundcloud Audio Link" (Blog
+						Page)?</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open Up <strong><i>'blog.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'&lt;!-- Post Soundcloud Audio Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update The
+						<strong
+							><i
+								>'https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/34019569&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=true'</i
+							></strong
+						>
+						from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/sound-cloud.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "Local Audio Link" (Blog
+						Page)?</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open Up your <strong><i>'blog.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'&lt;!-- Post Local Audio Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update The
+						<strong><i>'media/audio.mp3'</i></strong> from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/local-audio_change.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "Twitter User Name"?
+						(Sidebar)</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open Up <strong><i>'blog.html'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i>'&lt;!-- Tweets Widget Start --&gt;'</i></strong
+						>
+					</li>
+					<li>
+						Change the
+						<strong><i>data-user-name="themelooks"</i></strong> to
+						your username
+						<strong><i>data-user-name="your_user_name"</i></strong>
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/sidebar_twitter.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "Twitter User Name"?
+						(Footer)</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open Your Desired <strong><i>'.html'</i></strong> file.
+						(For Example, <strong>'index.html'</strong>)
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'&lt;!-- Latest Tweets Widget Start --&gt;'</i
+							></strong
+						>
+					</li>
+					<li>
+						Change the
+						<strong><i>data-user-name="themelooks"</i></strong> to
+						your username
+						<strong><i>data-user-name="your_user_name"</i></strong>
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/footer_twitter.png" alt="" />
+				<br />
+				<br />
+
+				<h3><strong>How can I change the "Flicker ID"?</strong></h3>
+				<ul>
+					<li>
+						Open Your Desired <strong><i>'.html'</i></strong> file.
+						(For Example, <strong>'index.html'</strong>)
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'&lt;!-- Flicker Widget Start --&gt;'</i
+							></strong
+						>
+						for blog sidebar section
+					</li>
+					<li>
+						Update The Flicker Id
+						<strong><i>'data-flicker-id="64801217"'</i></strong>
+						from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/flicker_id.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong>How can I change the "Goolge Map Position"?</strong>
+				</h3>
+				<ul>
+					<li>
+						Open Up <strong><i>'main.js'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong><i>'MAP'</i></strong>
+					</li>
+					<li>
+						Update latitude/longitude
+						<strong><i>'lat: 23.790546, lng: 90.375583'</i></strong>
+						from there
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/google-map.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I change the "Goolge Map Position" (Hosting
+						Version)?</strong
+					>
+				</h3>
+				<ul>
+					<li>
+						Open Up
+						<strong><i>'matrozhost-main.js'</i></strong> file.
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong><i>'MAP'</i></strong>
+					</li>
+					<li>Update latitude/longitude's from there</li>
+				</ul>
+				<br />
+				<img src="assets/images/google-map-hosting.png" alt="" />
+				<br />
+				<br />
+
+				<h3><strong>How can I remove the "Preloader"?</strong></h3>
+				<ul>
+					<li>
+						Open Up your Desired
+						<strong><i>'.html'</i></strong> file. (For Example,
+						<strong>'index.html'</strong>)
+					</li>
+					<li>
+						Then Search For the Comment
+						<strong><i>'&lt;!-- Preloader Start --&gt;'</i></strong>
+					</li>
+					<li>And Then Remove The Markup.</li>
+				</ul>
+				<br />
+				<img src="assets/images/preloader.png" alt="" />
+				<br />
+				<br />
+
+				<h3>
+					<strong
+						>How can I add my "Email Address"
+						(Sendmail.php)?</strong
+					>
+				</h3>
+				<ul>
+					<li>Open Up your <strong>'sendmail.php'</strong> file.</li>
+					<li>
+						Then Search For the Comment
+						<strong
+							><i
+								>'// Replace this with your own email
+								address'</i
+							></strong
+						>
+					</li>
+					<li>
+						Update The Email Address
+						<strong>'example@example.com'</strong> and Owner Name
+						<strong>'Example'</strong> from there.
+					</li>
+				</ul>
+				<br />
+				<img src="assets/images/email-address.png" alt="" />
+				<br />
+				<br />
+			</section>
+		</div>
+	</body>
+</html>

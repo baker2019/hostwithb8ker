@@ -1,0 +1,174 @@
+====================================================
+## WMHMCS Version 7 Templates
+====================================================
+
+When the updates are extended, we always recommend the following: Redownload the template from Themeforest, edit the latest version of the template
+and carefully apply your changes to "header.tpl", "footer.tpl" and "css/custom.css" (or any other files you want to customize)
+
+
+### FILES TO REPLACE
+
+- affiliates.tpl
+- clientareadomaindetails.tpl
+- clientareadomains.tpl
+- clientareaproductdetails.tpl
+- contact.tpl
+- creditcard.tpl
+- footer.tpl
+- invoicepdf.tpl
+- supportticketsubmit-steptwo.tpl
+- upgradesummary.tpl
+
+- css/matrozhost-style.css
+- css/overrides.css
+- css/styles.css
+- css/main-color-1.css
+- css/main-color-2.css
+- css/main-color-3.css
+- css/main-color-4.css
+- css/main-color-5.css
+
+- js/whmcs.js
+
+- includes/captcha.tpl
+- includes/head.tpl
+- includes/pwstrength.tpl
+- includes/tablelist.tpl
+
+
+### FILES CHANGES
+
+** FILE: affiliates.tpl
+
+line 114: 
+DELETED: <td><span class='label status status-{$referral.status|strtolower}'>{$referral.status}</span></td>
+ADDED : <td><span class='label status status-{$referral.rawstatus|strtolower}'>{$referral.status}</span></td>
+__________________________________________________________________________________
+
+** FILE: clientareadomaindetails.tpl
+
+line 67: 
+DELETED: {if $systemStatus == 'Active'}
+ADDED : {if $systemStatus == 'Active'
+           and (
+               $managementoptions.nameservers or
+                $managementoptions.contacts or
+               $managementoptions.locking or
+               $renew)}
+               {* No reason to show this section if nothing can be done here! *}
+
+
+line 93: 
+DELETED: <li>
+                    <a href="cart.php?gid=renewals">
+                       {$LANG.renewYourDomain}
+                    </a>
+               </li>
+ADDED : {if $renew}
+                   <li>
+                       <a href="cart.php?gid=renewals">
+                            {$LANG.renewYourDomain}
+                       </a>
+                    </li>
+               {/if}
+__________________________________________________________________________________
+
+** FILE: clientareadomains.tpl
+
+line 61: 
+DELETED: {if $domain.next30}{$LANG.domainsExpiringInTheNext30Days}<br />{/if}
+         {if $domain.next90}{$LANG.domainsExpiringInTheNext90Days}<br />{/if}
+         {if $domain.next180}{$LANG.domainsExpiringInTheNext180Days}<br />{/if}
+         {if $domain.after180}{$LANG.domainsExpiringInMoreThan180Days}{/if}
+ADDED : ~{$domain.statustext}~
+        {if $domain.next30}~{$LANG.domainsExpiringInTheNext30Days}~<br />{/if}
+        {if $domain.next90}~{$LANG.domainsExpiringInTheNext90Days}~<br />{/if}
+        {if $domain.next180}~{$LANG.domainsExpiringInTheNext180Days}~<br />{/if}
+        {if $domain.after180}~{$LANG.domainsExpiringInMoreThan180Days}~{/if}
+__________________________________________________________________________________
+
+** FILE: clientareaproductdetails.tpl
+
+line 42: 
+DELETED: <div class="col-xs-6">
+ADDED : <div class="col-xs-{if $showcancelbutton}6{else}12{/if}">
+
+line 45:
+DELETED: <div class="col-xs-6">
+         {else}
+         <div class="col-xs-12">
+		 
+line 49:
+DELETED: <a href="clientarea.php?action=cancel&amp;id={$id}" class="btn btn-block btn-danger {if $pendingcancellation}disabled{/if}">{if $pendingcancellation}{$LANG.cancellationrequested}{else}{$LANG.clientareacancelrequestbutton}{/if}</a>
+         </div>
+
+line 46:
+ADDED: {if $showcancelbutton}
+       <div class="col-xs-{if $packagesupgrade}6{else}12{/if}">
+       <a href="clientarea.php?action=cancel&amp;id={$id}" class="btn btn-block btn-danger {if $pendingcancellation}disabled{/if}">{if $pendingcancellation}{$LANG.cancellationrequested}{else}{$LANG.clientareacancelrequestbutton}{/if}</a>
+       </div>
+       {/if}
+	   
+line 353:
+DELETED: <span class="label status-{$addon.status|strtolower}">{$addon.status}</span>
+ADDED: <span class="label status-{$addon.rawstatus|strtolower}">{$addon.status}</span>
+__________________________________________________________________________________
+
+** FILE: contact.tpl
+
+line 38: 
+DELETED: <div class="row">
+         <div class="col-sm-offset-3 col-sm-9">
+        {include file="$template/includes/captcha.tpl"}
+        </div>
+ADDED : <div class="text-center margin-bottom">
+        {include file="$template/includes/captcha.tpl"}
+__________________________________________________________________________________
+
+** FILE: creditcard.tpl
+
+line 44: 
+DELETED: <label for="cctype" class="col-sm-4 control-label">Billing Address</label>
+ADDED : <label for="cctype" class="col-sm-4 control-label">{$LANG.billingAddress}</label>
+
+line 46:
+DELETED: {if $clientsdetails.companyname}{$clientsdetails.companyname}{else}{$firstname} {$lastname}{/if} <button type="button" id="btnEditBillingAddress" onclick="editBillingAddress()" class="btn btn-default btn-sm"{if $cardOnFile} disabled="disabled"{/if}><i class="fa fa-edit"></i> Change</button><br />
+         {$clientsdetails.address1}{if $clientsdetails.address2}, {$clientsdetails.address2}{/if}<br />
+         {$clientsdetails.city}, {$clientsdetails.state}, {$clientsdetails.postcode}<br />
+         {$clientsdetails.countryname}
+		 
+ADDED : {if $companyname}{$companyname}{else}{$firstname} {$lastname}{/if} <button type="button" id="btnEditBillingAddress" onclick="editBillingAddress()" class="btn btn-default btn-sm"{if $cardOnFile} disabled="disabled"{/if}><i class="fa fa-edit"></i> {$LANG.change}</button><br />
+        {$address1}{if $address2}, {$address2}{/if}<br />
+        {$city}, {$state}, {$postcode}<br />
+        {$countryname}
+__________________________________________________________________________________
+
+** FILE: footer.tpl
+
+line 122: 
+DELETED: <script src="{$BASE_PATH_JS}/jquery-ui.min.js"></script>
+__________________________________________________________________________________
+
+** FILE: includes/head.tpl
+
+line 28: 
+DELETED: <script src="{$BASE_PATH_JS}/markdown.min.js"></script>
+         <script src="{$BASE_PATH_JS}/to-markdown.js"></script>
+__________________________________________________________________________________
+
+** FILE: supportticketsubmit-steptwo.tpl
+
+line 91: 
+DELETED: {include file="$template/includes/captcha.tpl"}
+ADDED: <div class="text-center margin-bottom">
+        {include file="$template/includes/captcha.tpl"}
+__________________________________________________________________________________
+
+** FILE: upgradesummary.tpl
+
+line 118: 
+DELETED: <option value="none">{$LANG.paymentmethoddefault}</option>
+ADDED: {if $allowgatewayselection}
+       <option value="none">{$LANG.paymentmethoddefault}</option>
+       {/if}
+__________________________________________________________________________________

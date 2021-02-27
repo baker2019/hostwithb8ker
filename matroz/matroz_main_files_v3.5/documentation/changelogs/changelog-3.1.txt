@@ -1,0 +1,123 @@
+===============================
+02 October, 2019 - Version 3.1
+===============================
+
+-------------------------------------------------------------------------------------------
+Backup your theme/style folder and files before applying these updates.
+-------------------------------------------------------------------------------------------
+The best way is to use a compare tool, like: https://sourceforge.net/projects/kdiff3/files/
+and use it to compare the 'folders' (the version you're using with the new version)
+-------------------------------------------------------------------------------------------
+Updating HTML Templates Requires Manual Work.
+-------------------------------------------------------------------------------------------
+
+
+*. WHMCS template updated to be compatible with latest "WHMCS Version 7.8.3":
+-----------------------------------------------------------------------------
+
+    *. New File/Folders Added:
+    -------------------
+	-> account-paymentmethods-billing-contacts.tpl
+	-> account-paymentmethods-manage.tpl
+	-> account-paymentmethods.tpl
+	-> css/blue.png
+	-> css/blue@2x.png
+	-> includes/generate-password.tpl
+	-> password-reset-change-prompt.tpl
+	-> password-reset-container.tpl
+	-> password-reset-email-prompt.tpl	
+	-> password-reset-security-prompt.tpl
+	
+        
+    *. Files Affected (Need to Replace):
+    ------------------
+	-> clientareaaddcontact.tpl
+	-> clientareachangepw.tpl
+	-> clientareacontacts.tpl
+	-> clientareacreditcard.tpl
+	-> clientareadomaindetails.tpl
+	-> clientareainvoices.tpl
+	-> clientareaproductdetails.tpl
+	-> clientareaquotes.tpl
+	-> clientareasecurity.tpl
+	-> clientregister.tpl
+	-> creditcard.tpl
+	-> css/all.css
+	-> css/all.min.css
+	-> css/invoice.css
+	-> css/styles.css
+	-> invoicepdf.tpl
+	-> js/scripts.js
+	-> js/scripts.min.js
+	-> js/whmcs.js
+	-> login.tpl
+	-> masspay.tpl
+	-> oauth/login.tpl
+	-> pwreset.tpl
+	-> store/css/style.css
+	-> store/ssl/competitive-upgrade.tpl
+	-> store/ssl/dv.tpl
+	-> store/ssl/ev.tpl
+	-> store/ssl/index.tpl
+	-> store/ssl/ov.tpl
+	-> store/ssl/shared/certificate-pricing.tpl
+	-> store/ssl/shared/features.tpl
+	-> store/ssl/shared/logos.tpl
+	-> store/ssl/shared/nav.tpl
+	-> viewannouncement.tpl
+	-> viewinvoice.tpl
+	-> viewquote.tpl
+	-> viewticket.tpl
+
+
+	*. File Changes:
+	--------------------------
+	-> header.tpl
+	-----------------------------
+
+		=> Deleted:
+		-----------
+		Line 223: <input type="submit" name="transfer" class="btn transfer{$captcha->getButtonClass($captchaForm)}" value="{$LANG.domainstransfer}" />
+
+		=> Added:
+		---------
+		Line 223: <input type="submit" id="btnTransfer" class="btn transfer{$captcha->getButtonClass($captchaForm)}" value="{$LANG.domainstransfer}" />
+		
+		(After line 252 include new line): <input type="hidden" name="transfer" />
+		
+	-> footer.tpl
+	-----------------------------
+
+		=> Deleted:
+		-----------
+		Line 64: <p>Copyright &copy; {$date_year} <a href="{$WEB_ROOT}/index.php">{$companyname}</a>. All Rights Reserved.</p>
+		Line 77: <div class="modal-content panel panel-primary">
+		Line 81: <span class="sr-only">Close</span>
+		Line 83: <h4 class="modal-title">Title</h4>
+		Line 86: Loading...
+		Line 90: <i class="fas fa-circle-notch fa-spin"></i> Loading...
+		Line 93: Close
+		Line 96: Submit
+
+		=> Added:
+		---------
+		Line 64: <p>{lang key="copyrightFooterNotice" year=$date_year company=$companyname}</p>
+		Line 77: <div class="modal-content panel-primary">
+		Line 81: <span class="sr-only">{$LANG.close}</span>
+		Line 83: <h4 class="modal-title"></h4>
+		Line 86: {$LANG.loading}
+		Line 90: <i class="fas fa-circle-notch fa-spin"></i>
+                {$LANG.loading}
+		Line 93: {$LANG.close}
+		Line 96: {$LANG.submit}
+		(After line 103 include new line): {include file="$template/includes/generate-password.tpl"}
+
+	-> css/matrozhost-style.css
+	-----------------------------
+	=> Added:
+	---------
+		Line 1933:
+		/* WHMCS */
+		.btn-google { background-color: #dd4b39; color: #fff;}
+
+		.btn-google:hover { color: #fff;}

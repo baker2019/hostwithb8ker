@@ -1,0 +1,250 @@
+====================================================
+## WMHMCS Version 7.1 Templates
+====================================================
+
+When the updates are extended, we always recommend the following: Redownload the template from Themeforest, edit the latest version of the template
+and carefully apply your changes to "header.tpl", "footer.tpl" and "css/custom.css" (or any other files you want to customize)
+
+
+### NEW FILES
+
+css/all.css
+css/all.min.css
+fonts (all folder)
+js/scripts.js
+js/scripts.min.js
+
+
+### FILES TO REPLACE
+
+css/overrides.css
+css/styles.css
+includes/sidebar.tpl
+includes/tablelist.tpl
+js/whmcs.js
+oauth/layout.tpl
+
+
+### FILES CHANGES
+
+** FILE: affiliates.tpl
+
+line 112: 
+DELETED
+<td>{$referral.amountdesc}</td>
+<td>{$referral.commission}</td> 	
+ADDED 
+<td data-order="{$referral.amountnum}">{$referral.amountdesc}</td>
+<td data-order="{$referral.commissionnum}">{$referral.commission}</td>
+__________________________________________________________________________________
+
+** FILE: clientareacreditcard.tpl
+
+line 62: 
+DELETED
+<form class="form-horizontal" role="form" method="post" action="{$smarty.server.PHP_SELF}?action=creditcard">	
+ADDED 
+<form id="frmNewCc" class="form-horizontal" role="form" method="post" action="{$smarty.server.PHP_SELF}?action=creditcard">
+<div class="alert alert-danger text-center gateway-errors hidden"></div>
+
+line 76: 
+DELETED
+<input type="number" class="form-control" id="inputCardNumber" name="ccnumber" autocomplete="off" />	
+ADDED 
+<input type="tel" class="form-control" id="inputCardNumber" name="ccnumber" autocomplete="off" />
+
+line 115: 
+DELETED
+<input type="number" class="form-control" id="inputCardIssue" name="ccissuenum" autocomplete="off" />
+ADDED 
+<input type="tel" class="form-control" id="inputCardIssue" name="ccissuenum" autocomplete="off" />
+
+line 122: 
+DELETED
+<input type="number" class="form-control input-inline input-inline-100" id="inputCardCVV" name="cardcvv" autocomplete="off" />
+ADDED 
+<input type="tel" class="form-control input-inline input-inline-100" id="inputCardCVV" name="cardcvv" autocomplete="off" />
+
+line 130: 
+DELETED
+<input class="btn btn-primary" type="submit" name="submit" value="{$LANG.clientareasavechanges}" />
+ADDED 
+<input class="btn btn-primary" id="btnSubmitNewCard" type="submit" name="submit" value="{$LANG.clientareasavechanges}" />
+__________________________________________________________________________________
+
+** FILE: clientareainvoices.tpl
+
+line 42: 
+DELETED
+<td>{$invoice.total}</td>
+ADDED 
+<td data-order="{$invoice.totalnum}">{$invoice.total}</td>
+__________________________________________________________________________________
+
+** FILE: clientareaproducts.tpl
+
+line 34: 
+DELETED
+<td class="text-center">{$service.amount}<br />{$service.billingcycle}</td>
+ADDED 
+<td class="text-center" data-order="{$service.amountnum}">{$service.amount}<br />{$service.billingcycle}</td>
+__________________________________________________________________________________
+
+** FILE: creditcard.tpl
+
+line 18: 
+DELETED
+<form method="post" action="creditcard.php" class="form-horizontal" role="form">
+ADDED 
+<form id="frmPayment" method="post" action="creditcard.php" class="form-horizontal" role="form">
+
+line 121: 
+DELETED
+<input type="number" name="ccnumber" id="inputCardNumber" size="30" value="{if $ccnumber}{$ccnumber}{/if}" autocomplete="off" class="form-control newccinfo" />
+ADDED 
+<input type="tel" name="ccnumber" id="inputCardNumber" size="30" value="{if $ccnumber}{$ccnumber}{/if}" autocomplete="off" class="form-control newccinfo" />
+
+line 187: 
+DELETED
+<input type="submit" class="btn btn-primary btn-lg" value="{$LANG.submitpayment}" onclick="this.value='{$LANG.pleasewait}'" id="btnSubmit" />
+ADDED 
+<button type="submit" class="btn btn-primary btn-lg" id="btnSubmit" value="{$LANG.submitpayment}">
+	<span class="pay-text">{$LANG.submitpayment}</span>
+	<span class="click-text hidden">{$LANG.pleasewait}</span>
+</button>
+__________________________________________________________________________________
+
+** FILE: footer.tpl
+
+line 121-128: 
+DELETED
+<script src="{$BASE_PATH_JS}/bootstrap.min.js"></script>
+<script src="{$BASE_PATH_JS}/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    var csrfToken = '{$token}',
+        markdownGuide = '{lang key="markdown.title"}',
+        locale = '{if !empty($mdeLocale)}{lang key="locale"}{else}en_GB{/if}',
+        saved = '{lang key="markdown.saved"}',
+        saving = '{lang key="markdown.saving"}';
+</script>
+
+line 134:
+DELETED
+<script src="{$WEB_ROOT}/templates/{$template}/js/whmcs.js"></script>
+<script src="{$BASE_PATH_JS}/AjaxModal.js"></script>
+__________________________________________________________________________________
+
+** FILE: includes/head.tpl
+
+line 1-7: 
+DELETED
+<!-- Bootstrap -->
+<link href="{$BASE_PATH_CSS}/bootstrap.min.css" rel="stylesheet">
+<link href="{$BASE_PATH_CSS}/font-awesome.min.css" rel="stylesheet">
+
+<!-- Styling -->
+<link href="{$WEB_ROOT}/templates/{$template}/css/overrides.css" rel="stylesheet">
+<link href="{$WEB_ROOT}/templates/{$template}/css/styles.css" rel="stylesheet">
+
+ADDED
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600|Raleway:400,700" rel="stylesheet">
+<link href="{$WEB_ROOT}/templates/{$template}/css/all.min.css?v={$versionHash}" rel="stylesheet">
+
+line 10:
+DELETED
+<script src="{$BASE_PATH_JS}/jquery.min.js"></script>
+
+line 22:
+DELETED
+{if !empty($loadMarkdownEditor)}
+    <!-- Markdown Editor -->
+    <link href="{$BASE_PATH_CSS}/bootstrap-markdown.min.css" rel="stylesheet" />
+    <script src="{$BASE_PATH_JS}/bootstrap-markdown.js"></script>
+    {if !empty($mdeLocale)}
+        {$mdeLocale}
+    {/if}
+{/if}
+ADDED:
+<script type="text/javascript">
+    var csrfToken = '{$token}',
+        markdownGuide = '{lang key="markdown.title"}',
+        locale = '{if !empty($mdeLocale)}{$mdeLocale}{else}en{/if}',
+        saved = '{lang key="markdown.saved"}',
+        saving = '{lang key="markdown.saving"}';
+</script>
+<script src="{$WEB_ROOT}/templates/{$template}/js/scripts.min.js?v={$versionHash}"></script>
+__________________________________________________________________________________
+
+** FILE: quotepdf.tpl
+
+line 18: 
+DELETED
+$pdf->SetX($pdf->GetX()+10);
+$pdf->Cell(20,6,$_LANG['quotenumber'],1,0,'C');
+$pdf->Cell(70,6,$_LANG['quotesubject'],1,0,'C');
+$pdf->Cell(35,6,$_LANG['quotedatecreated'],1,0,'C');
+$pdf->Cell(35,6,$_LANG['quotevaliduntil'],1,1,'C');
+
+$pdf->SetFont($pdfFont,'',9);
+$pdf->SetX($pdf->GetX()+10);
+$rowcount = $pdf->getNumLines($subject, 60);
+$height = $rowcount * 5;
+$pdf->MultiCell(20,$height,$quotenumber,1,'C',0,0);
+$pdf->MultiCell(70,$height,$subject,1,'C',0,0);
+$pdf->MultiCell(35,$height,$datecreated,1,'C',0,0);
+$pdf->MultiCell(35,$height,$validuntil,1,'C',0,1);
+
+ADDED 
+$tblhtml = "
+<table width=\"100%\" bgcolor=\"#ccc\" cellspacing=\"1\" cellpadding=\"2\" border=\"0\">
+   <tr height=\"30\" bgcolor=\"#efefef\" style=\"font-weight:bold;text-align:center;\">
+        <td>{$_LANG['quotenumber']}</td>
+        <td>{$_LANG['quotesubject']}</td>
+        <td>{$_LANG['quotedatecreated']}</td>
+        <td>{$_LANG['quotevaliduntil']}</td>
+    </tr>
+    <tr bgcolor=\"#fff\">
+        <td align=\"center\">{$quotenumber}</td>
+        <td align=\"left\">{$subject}</td>
+        <td align=\"center\">{$datecreated}</td>
+        <td align=\"center\">{$validuntil}</td>
+    </tr>
+</table>";
+$pdf->writeHTML($tblhtml, true, false, false, false, '');
+__________________________________________________________________________________
+
+** FILE: viewinvoice.tpl
+
+line 9-16: 
+DELETED
+<!-- Bootstrap -->
+    <link href="{$BASE_PATH_CSS}/bootstrap.min.css" rel="stylesheet">
+    <link href="{$BASE_PATH_CSS}/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Styling -->
+    <link href="templates/{$template}/css/overrides.css" rel="stylesheet">
+    <link href="templates/{$template}/css/styles.css" rel="stylesheet">
+    <link href="templates/{$template}/css/invoice.css" rel="stylesheet">
+
+ADDED 
+<link href="{$WEB_ROOT}/templates/{$template}/css/all.min.css" rel="stylesheet">
+<link href="{$WEB_ROOT}/templates/{$template}/css/invoice.css" rel="stylesheet">
+__________________________________________________________________________________
+
+** FILE: viewquote.tpl
+
+line 9-16: 
+DELETED
+<!-- Bootstrap -->
+    <link href="{$BASE_PATH_CSS}/bootstrap.min.css" rel="stylesheet">
+    <link href="{$BASE_PATH_CSS}/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Styling -->
+    <link href="templates/{$template}/css/overrides.css" rel="stylesheet">
+    <link href="templates/{$template}/css/styles.css" rel="stylesheet">
+    <link href="templates/{$template}/css/invoice.css" rel="stylesheet">
+
+ADDED 
+<link href="{$WEB_ROOT}/templates/{$template}/css/all.min.css" rel="stylesheet">
+<link href="{$WEB_ROOT}/templates/{$template}/css/invoice.css" rel="stylesheet">
+__________________________________________________________________________________

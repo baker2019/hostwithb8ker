@@ -1,0 +1,88 @@
+============================
+05 April, 2018 - Version 2.7
+============================
+
+-------------------------------------------------------------------------------------------
+Backup your theme/style folder and files before applying these updates.
+-------------------------------------------------------------------------------------------
+The best way is to use a compare tool, like: https://sourceforge.net/projects/kdiff3/files/
+and use it to compare the 'folders' (the version you're using with the new version)
+-------------------------------------------------------------------------------------------
+Updating HTML Templates Requires Manual Work.
+-------------------------------------------------------------------------------------------
+
+
+*. Fixed 404 Background Image Repeating Issue:
+----------------------------------------------
+
+	*. Files Affected:
+	------------------
+		-> business-version/style.css
+		-> hosting-version/html-template/style.css
+
+
+*. WHMCS template updated to be compatible with latest "WHMCS Version 7.5.0":
+-----------------------------------------------------------------------------
+
+	*. New Files Added:
+	-------------------
+		-> MatRozHostCV1/store/login/sitelock.tpl
+		-> MatRozHostCV1/store/ssl/competitive-upgrade.tpl
+		-> MatRozHostCV1/store/sitelock/index.tpl
+		-> MatRozHostCV1/domain-pricing.tpl
+		-> MatRozHostCV1/subscription-manage.tpl
+		-> MatRozHostCV1/upgrade-configure.tpl
+
+	*. Files Affected:
+	------------------
+		-> MatRozHostCV1/css/all.css
+		-> MatRozHostCV1/css/all.min.css
+		-> MatRozHostCV1/css/help.md
+		-> MatRozHostCV1/css/styles.css
+		-> MatRozHostCV1/includes/tablelist.tpl
+		-> MatRozHostCV1/js/scripts.js
+		-> MatRozHostCV1/js/scripts.min.js
+		-> MatRozHostCV1/js/whmcs.js
+		-> MatRozHostCV1/store/css/style.css
+		-> MatRozHostCV1/store/login/spamexperts.tpl
+		-> MatRozHostCV1/store/login/weebly.tpl
+		-> MatRozHostCV1/store/promos/cart.tpl
+		-> MatRozHostCV1/store/promos/slimupsell.tpl
+		-> MatRozHostCV1/store/promos/upsell.tpl
+		-> MatRozHostCV1/store/spamexperts/index.tpl
+		-> MatRozHostCV1/store/spamexperts/master.js
+		-> MatRozHostCV1/store/ssl/shared/certificate-pricing.tpl
+		-> MatRozHostCV1/store/ssl/shared/currency-chooser.tpl
+		-> MatRozHostCV1/store/ssl/shared/features.tpl
+		-> MatRozHostCV1/store/ssl/shared/logos.tpl
+		-> MatRozHostCV1/store/ssl/shared/nav.tpl
+		-> MatRozHostCV1/store/ssl/dv.tpl
+		-> MatRozHostCV1/store/ssl/ev.tpl
+		-> MatRozHostCV1/store/ssl/index.tpl
+		-> MatRozHostCV1/store/ssl/ov.tpl
+		-> MatRozHostCV1/store/ssl/wildcard.tpl
+		-> MatRozHostCV1/store/weebly/index.tpl
+		-> MatRozHostCV1/store/weebly/master.js
+		-> MatRozHostCV1/store/order.tpl
+		-> MatRozHostCV1/announcements.tpl
+		-> MatRozHostCV1/clientareadetails.tpl
+		-> MatRozHostCV1/clientareadomaindetails.tpl
+		-> MatRozHostCV1/clientareadomains.tpl
+		-> MatRozHostCV1/clientregister.tpl
+		-> MatRozHostCV1/homepage.tpl
+		-> MatRozHostCV1/knowledgebase.tpl
+		-> MatRozHostCV1/knowledgebasearticle.tpl
+		-> MatRozHostCV1/knowledgebasecat.tpl
+		-> MatRozHostCV1/viewannouncement.tpl
+	
+	*. File Changes:
+	--------------------------
+		-> MatRozHostCV1/includes/head.tpl
+			=> Deleted:
+			-----------
+			Line 23: saving = '{lang key="markdown.saving"}';
+			
+			=> Added:
+			---------
+			Line 23: saving = '{lang key="markdown.saving"}',
+			Line 24: whmcsBaseUrl = "{\WHMCS\Utility\Environment\WebHelper::getBaseUrl()}";

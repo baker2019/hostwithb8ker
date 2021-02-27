@@ -1,0 +1,47 @@
+==============================
+18 April, 2020 - Version 3.3
+==============================
+
+-------------------------------------------------------------------------------------------
+Backup your theme/style folder and files before applying these updates.
+-------------------------------------------------------------------------------------------
+The best way is to use a compare tool, like: https://sourceforge.net/projects/kdiff3/files/
+and use it to compare the 'folders' (the version you're using with the new version)
+-------------------------------------------------------------------------------------------
+Updating HTML Templates Requires Manual Work.
+-------------------------------------------------------------------------------------------
+
+
+*. WHMCS template updated to be compatible with latest "WHMCS Version 7.10.0":
+----------------------------------------------------------------------------
+
+    *. New File/Folders Added:
+    -------------------
+	-> store/marketgoo/index.php
+	-> store/marketgoo/index.tpl
+        
+    *. Files Affected (Need to Replace):
+    ------------------
+	-> clientareacontacts.tpl
+	-> clientareadetails.tpl
+	-> css/all.css
+	-> css/all.min.css
+	-> css/styles.css
+	-> includes/verifyemail.tpl
+	-> js/scripts.js 
+	-> js/scripts.min.js
+	-> js/whmcs.js 
+	-> payment/bank/validate.tpl
+	-> payment/card/validate.tpl
+	-> store/codeguard/index.tpl
+	-> store/css/style.css
+	-> store/order.tpl
+	-> store/promos/upsell.tpl
+	-> store/sitelock/index.tpl
+	-> store/sitelockvpn/index.tpl
+	-> store/spamexperts/index.tpl
+	-> store/ssl/index.tpl
+	-> store/ssl/shared/features.tpl
+	-> store/weebly/index.tpl
+	-> store/weebly/master.js
+	-> upgrade-configure.tpl

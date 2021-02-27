@@ -1,0 +1,79 @@
+==============================
+27 January, 2020 - Version 3.2
+==============================
+
+-------------------------------------------------------------------------------------------
+Backup your theme/style folder and files before applying these updates.
+-------------------------------------------------------------------------------------------
+The best way is to use a compare tool, like: https://sourceforge.net/projects/kdiff3/files/
+and use it to compare the 'folders' (the version you're using with the new version)
+-------------------------------------------------------------------------------------------
+Updating HTML Templates Requires Manual Work.
+-------------------------------------------------------------------------------------------
+
+
+*. WHMCS template updated to be compatible with latest "WHMCS Version 7.9.1":
+----------------------------------------------------------------------------
+
+    *. New File/Folders Added:
+    -------------------
+	-> oauth/css/index.php
+	-> payment/bank/inputs.tpl
+	-> payment/bank/select.tpl
+	-> payment/bank/validate.tpl
+	-> payment/billing-address.tpl
+	-> payment/card/inputs.tpl
+	-> payment/card/select.tpl
+	-> payment/card/validate.tpl
+	-> payment/invoice-summary.tpl
+	-> store/codeguard/index.php
+	-> store/css/index.php
+	-> store/promos/index.php
+	-> store/sitelock/index.php
+	-> store/sitelockvpn/index.php
+	-> store/sitelockvpn/index.tpl
+	-> store/spamexperts/index.php
+	-> store/ssl/index.php
+	-> store/ssl/shared/index.php
+	-> store/weebly/index.php
+	-> usagebillingpricing.tpl
+        
+    *. Files Affected (Need to Replace):
+    ------------------
+	-> account-paymentmethods-manage.tpl
+	-> account-paymentmethods.tpl
+	-> clientareaproductdetails.tpl
+	-> clientareaproductusagebilling.tpl
+	-> creditcard.tpl
+	-> css/all.css
+	-> css/all.min.css
+	-> css/invoice.css
+	-> css/styles.css
+	-> includes/captcha.tpl
+	-> includes/generate-password.tpl
+	-> invoice-payment.tpl
+	-> js/scripts.js
+	-> js/scripts.min.js
+	-> js/whmcs.js
+	-> store/css/style.css
+	-> store/order.tpl
+	-> store/ssl/index.tpl
+	-> viewinvoice.tpl
+
+	*. File Changes:
+	--------------------------
+	-> footer.tpl
+	-----------------------------
+
+		=> Added:
+		---------
+		Line 75: 
+<div id="fullpage-overlay" class="hidden">
+    <div class="outer-wrapper">
+        <div class="inner-wrapper">
+            <img src="{$WEB_ROOT}/assets/img/overlay-spinner.svg">
+            <br>
+            <span class="msg"></span>
+        </div>
+    </div>
+</div>

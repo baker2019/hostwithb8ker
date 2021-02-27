@@ -1,0 +1,62 @@
+===============================
+29 November, 2017 - Version 2.5
+===============================
+
+-------------------------------------------------------------------------------------------
+Backup your theme/style folder and files before applying these updates.
+-------------------------------------------------------------------------------------------
+The best way is to use a compare tool, like: https://sourceforge.net/projects/kdiff3/files/
+and use it to compare the 'folders' (the version you're using with the new version)
+-------------------------------------------------------------------------------------------
+Updating HTML Templates Requires Manual Work.
+-------------------------------------------------------------------------------------------
+
+
+*. WHMCS template updated to be compatible with latest "WHMCS Version 7.4.1"
+----------------------------------------------------------------------------
+
+	*. Simply Add The Following Files:
+	----------------------------------
+		-> css/index.php
+		-> error/index.php
+		-> fonts/index.php
+		-> img/flags.png
+		-> img/flags@2x.png
+		-> img/index.php
+		-> includes/index.php
+		-> js/index.php
+		-> oauth/index.php
+		-> index.php
+
+	*. Simply Replace The Following Files:
+	--------------------------------------
+		-> css/all.css
+		-> css/all.min.css
+		-> css/help.md
+		-> css/main-color-1.css
+		-> css/main-color-2.css
+		-> css/main-color-3.css
+		-> css/main-color-4.css
+		-> css/main-color-5.css
+		-> css/matrozhost-style.css
+		-> css/styles.css
+		-> js/matrozhost-main.js
+		-> js/scripts.js
+		-> js/scripts.min.js
+		-> store/spamexperts/index.tpl
+		-> store/spamexperts/master.js
+		-> store/weebly/upgrade.tpl
+		-> store/index.php
+		-> creditcard.tpl
+		-> knowledgebase.tpl
+
+	*. Simply Replace The Following Codes:
+	--------------------------------------
+		-> header.tpl
+			=> Deleted:
+			-----------
+			Line 14: <body>
+			
+			=> Added:
+			---------
+			Line 14: <body data-phone-cc-input="{$phoneNumberInputStyle}">
